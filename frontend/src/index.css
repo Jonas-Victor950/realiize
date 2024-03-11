@@ -8,6 +8,16 @@ body {
   background: linear-gradient(to right, white, #650BA4);
 }
 
+h2 {
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+}
+
+h3 {
+  font-family: "Questrial", sans-serif;
+  font-style: normal;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
