@@ -1,0 +1,26 @@
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #650ba4;
+  padding: 0.1em 1em;
+  height: 57.8px;
+}
+
+#nav .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+#nav .right span {
+  margin-left: 30px;
+  height: 15.4px;
+  color: #FFD632;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
