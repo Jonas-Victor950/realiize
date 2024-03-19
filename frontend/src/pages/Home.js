@@ -1,5 +1,7 @@
 import "./Home.css";
 import logo from "../images/logoRealiize.png";
+import hashtag from "../images/hashtag.png"
+import gusAndBia from "../images/1.png"
 
 // Components
 import { NavLink, Link } from "react-router-dom";
@@ -22,7 +24,26 @@ const Home = () => {
 
   return (
     <div id="home">
-      <div className="content-one"></div>
+      <div className="content-one">
+        <div className="form-group">
+          <div>
+            <img src={hashtag} id="hashtag"/>
+          </div>
+          <div>
+            <button>QUERO ALAVANCAR MINHA MARCA!</button>
+          </div>
+        </div>
+        <div className="form-group">
+          <div>
+            <img id="gusAndBia" src={gusAndBia}/>
+          </div>
+          <div className="yellow-down">
+            <div>SOLUÇÃO COMPLETA PARA SUA EMPRESA</div>
+            <div>EMPREENDA COM IMPACTO</div>
+            <div>APOIO AOS JOVENS EMPREENDEDORES</div>
+          </div>
+        </div>
+      </div>
       <div className="content-two">
         <div className="columns">
           {" "}
@@ -82,10 +103,9 @@ const Home = () => {
               </div>
             </form>
           </div>
-          <div className="background-image"></div>
         </div>
       </div>
-      <div className="content-three"><span>ai</span></div>
+      <div className="content-three"></div>
       <div className="content-four"></div>
       <div className="content-five"></div>
       <div className="content-six"></div>

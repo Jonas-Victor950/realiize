@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo from "../images/logoRealiize.png"
+import logo from "../images/logoRealiize.png";
 
 // Components
 import { NavLink, Link } from "react-router-dom";
@@ -16,7 +16,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -24,12 +23,13 @@ const Navbar = () => {
   return (
     <nav id="nav">
       <div className="left">
-        <img src={logo}></img>
+        <img id="image" src={logo}></img>
       </div>
       <div className="right">
-        <span>SERVIÇOS</span>
-        <span>SEJA UM JOVEM EMPREENDEDOR</span>
-        <span>QUEM SOMOS</span>
+        <div id="hamburger">&#9776;</div>
+        <span id="span">SERVIÇOS</span>
+        <span id="span">SEJA UM JOVEM EMPREENDEDOR</span>
+        <span id="span">QUEM SOMOS</span>
       </div>
     </nav>
   );
