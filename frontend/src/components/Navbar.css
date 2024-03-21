@@ -8,7 +8,7 @@
   align-items: center !important;
   text-align: center;
   background-color: #650ba4 !important;
-  height: 8vh !important;
+  height: 10vh !important;
 }
 
 #nav .right {
@@ -34,5 +34,5 @@
   font-style: normal;
 }
 #image {
-  margin-top: 3vh;
+  margin-top: 4vh;
 }

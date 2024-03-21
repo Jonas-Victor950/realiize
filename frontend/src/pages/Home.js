@@ -2,6 +2,7 @@ import "./Home.css";
 import logo from "../images/logoRealiize.png";
 import hashtag from "../images/hashtag.png"
 import gusAndBia from "../images/1.png"
+import yellowContentTwo from "../images/amarelo_content_two.png"
 
 // Components
 import { NavLink, Link } from "react-router-dom";
@@ -45,64 +46,12 @@ const Home = () => {
         </div>
       </div>
       <div className="content-two">
-        <div className="columns">
-          {" "}
-          <div className="column">
-            <div>
-              <h2 style={{ fontSize: "35px", marginBottom: "0px" }}>
-                DE O PRÓXIMO
-              </h2>
-              <h3
-                style={{
-                  fontSize: "69.3px",
-                  marginTop: "0px",
-                  marginBottom: "0px",
-                }}
-              >
-                PASSO:
-              </h3>
-              <h3
-                style={{ fontSize: "17.8px", marginTop: "0px", width: "240px" }}
-              >
-                A escolha de responder esse formulário, já te diferencia dos
-                concorrentes!
-              </h3>
-            </div>
-            <div>
-              <h2
-                style={{
-                  fontSize: "17.6px",
-                  fontWeight: "600",
-                  width: "240px",
-                }}
-              >
-                NAS PRÓXIMAS 12h NOSSA EQUIPE ENTRARÁ EM CONTATO COM VOCÊ!
-              </h2>
-            </div>
-          </div>
-          <div className="column-two">
-            <div id="triangulo-para-direita"></div>
-            <form>
-              <div>
-                <input placeholder="NOME"></input>
-              </div>
-              <div>
-                <input placeholder="TELEFONE"></input>
-              </div>
-              <div>
-                <input placeholder="EMAIL"></input>
-              </div>
-              <div>
-                <input placeholder="EMPRESA"></input>
-              </div>
-              <div>
-                <input placeholder="NICHO"></input>
-              </div>
-              <div>
-                <input placeholder="FATURAMENTO"></input>
-              </div>
-            </form>
-          </div>
+        <div>
+          <div id="purple-rectangle"></div>
+          <img src={yellowContentTwo} id="image-yellow-content-two"/>
+        </div>
+        <div>
+
         </div>
       </div>
       <div className="content-three"></div>
