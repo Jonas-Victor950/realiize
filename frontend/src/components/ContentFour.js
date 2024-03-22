@@ -47,14 +47,16 @@ const ContentFour = () => {
   const settings = {
     dots: false,
     infinite: false,
-    speed: 20, // Definindo o tempo de transição para 2 segundos
+    speed: 20,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Ativar o modo de reprodução automática
-    autoplaySpeed: 20, // Definindo o tempo de exibição de cada slide para 2 segundos
+    autoplay: false,
+    autoplaySpeed: 2000,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
+
+  
 
   return (
     <div className="content-fourth">
@@ -91,7 +93,6 @@ const ContentFour = () => {
               • Comunicação efetiva da mensagem desejada.
             </div>
           </div>
-
           <div className="content">
             <img src={hashtag} alt="Descrição da imagem 2" />
             <h2>Título do Slide 2</h2>
