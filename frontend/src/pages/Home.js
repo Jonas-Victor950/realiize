@@ -122,9 +122,28 @@ const Home = () => {
         </div>
         <div className="form-group-two">
           <img src={grafic} className="image"/>
+          <div className="flex-one">
+            <div className="text-one">A Realiize acredita no potencial dessa geração!</div>
+            <div className="purple-vertical"></div>
+            <div className="text-two">Temos planos EXCLUSIVOS para jovens até 25 anos.</div>
+          </div>
         </div>
         <div className="form-group-three"></div>
-        <div className="form-group-four"></div>
+        <div className="form-group-four">
+          <div className="text-one">QUER NOSSA AJUDA?</div>
+          <form className="columns-one">
+            <div className="left-side">
+              <input placeholder="NOME"/>
+              <input placeholder="TELEFONE"/>
+              <input placeholder="EMAIL"/>
+              <input placeholder="QUAL SUA IDEIA"/>
+            </div>
+            <div className="right-side">
+              <input placeholder="IDADE"/>
+              <button>ENVIAR</button>
+            </div>
+          </form>
+        </div>
       </div>
       <div className="content-six"></div>
     </div>

@@ -123,6 +123,7 @@
   margin-top: 10px;
   border-radius: 8px;
   font-weight: 700;
+  border: none;
 }
 
 #home .content-two .column-three .text-one {
@@ -207,6 +208,27 @@
 #home .content-five {
   margin-top: 50px;
 }
+
+#home .content-five .form-group-two .flex-one {
+  font-family: "Questrial", sans-serif;
+  font-size: 0.85em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #650ba4;
+}
+
+#home .content-five .form-group-two .flex-one .text-one,
+#home .content-five .form-group-two .flex-one .text-two {
+  padding-top: 8px;
+}
+
+#home .content-five .form-group-two .flex-one .purple-vertical {
+  width: 5px;
+  background-color: #650ba4;
+  height: 50px;
+}
 #home .content-five .form-group-two .image {
   width: 85vw;
   margin-top: 10px;
@@ -225,4 +247,77 @@
   color: #650ba4;
 }
 
+#home .content-five .form-group-four {
+    margin-top: 30px;
+}
+
+#home .content-five .form-group-four .text-one {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  color: #650ba4;
+  margin-bottom: 5px;
+}
+
+#home .content-five .form-group-four .columns-one {
+  display: flex;
+}
+
+#home .content-five .form-group-four .columns-one .left-side input {
+  width: 50vw;
+  height: 30px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #650ba4; /* Definindo a borda */
+  font-size: 15px;
+  background-color: #f4dd83;
+  color: #650ba4;
+  font-family: "Montserrat", sans-serif;
+}
+
+#home
+  .content-five
+  .form-group-four
+  .columns-one
+  .left-side
+  input::placeholder {
+  font-family: "Questrial", sans-serif;
+  color: #650ba4;
+}
+
+#home .content-five .form-group-four .columns-one .right-side input {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 120px;
+  height: 80px;
+  width: 25vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #f4dd83;
+  border: 1px solid #650ba4;
+}
+#home
+  .content-five
+  .form-group-four
+  .columns-one
+  .right-side
+  input::placeholder {
+  font-family: "Questrial", sans-serif;
+  color: #650ba4;
+}
+
+#home .content-five .form-group-four .columns-one .right-side button {
+  background-color: #f4dd83;
+  font-size: 1em;
+  border: 1px solid #650ba4;
+  border-radius: 5px;
+  color: #650ba4;
+  padding: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
 /*End Content-five mobile */
+
+/*Start Content-six mobile */
+/*End Content-six mobile */
