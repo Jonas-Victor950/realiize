@@ -40,16 +40,101 @@
   font-style: normal;
 }
 
+/*Start Content-two mobile */
+
 #home #purple-rectangle {
   background-color: #650ba4;
   height: 3vh;
-  margin-top: 20vh;
+  margin-top: 13vh;
+}
+
+#home #purple-rectangle2 {
+  background-color: #650ba4;
+  height: 3vh;
+  margin-top: 5vh;
 }
 
 #home #image-yellow-content-two {
   width: 100vw;
   height: 130vh;
-
   border: 1px solid red;
   margin-left: 0;
 }
+
+#home .content-two .column-one .text-one {
+  margin-top: -120vh;
+  font-size: 9.1vw;
+  border: 1px solid red;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800;
+  color: #650ba4;
+}
+
+#home .content-two .column-one .text-two {
+  font-family: "Questrial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 00;
+  font-style: normal;
+  font-size: 23.5vw;
+  color: #650ba4;
+  margin-top: -2vh;
+}
+
+#home .content-two .column-one .text-three {
+  color: #650ba4;
+  width: 76vw;
+  margin-left: 12vw;
+  border: 1px solid red;
+  font-size: 4.4vw;
+}
+
+#home .content-two .column-two .image-one {
+  margin-top: 5vh;
+  width: 60vw;
+  height: 20vh;
+  margin-bottom: 5vh;
+}
+
+#home .content-two .column-three form div select,
+#home .content-two .column-three form div input {
+  width: 60vw;
+  height: 5vh;
+  margin-bottom: 0.7vh;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #650ba4; /* Definindo a borda */
+  font-size: 4vw;
+  background-color: #f4dd83;
+  color: #650ba4;
+}
+
+#home .content-two .column-three form div select::placeholder,
+#home .content-two .column-three form div input::placeholder {
+  font-family: "Questrial", sans-serif;
+  color: #650ba4;
+}
+
+#home .content-two .column-three form button {
+  width: 15vh;
+  color: #FFD632;
+  background-color: #650ba4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4vw;
+  margin-top: 3vh;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+#home .content-two .column-three .text-one {
+  font-family: "Montserrat", sans-serif;
+  color: #650BA4;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-top: 5vh;
+  font-size: 3.1vw;
+  font-weight: 800;
+}
+
+/*End Content-two mobile */
