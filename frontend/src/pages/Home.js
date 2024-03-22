@@ -4,6 +4,9 @@ import hashtag from "../images/hashtag.png";
 import gusAndBia from "../images/1.png";
 import yellowContentTwo from "../images/amarelo_content_two.png";
 import purpleContentTwo from "../images/4.png";
+import piramideContentThree from "../images/3.png";
+import React from "react";
+import grafic from "../images/5.png";
 
 // Components
 import { NavLink, Link } from "react-router-dom";
@@ -18,6 +21,7 @@ import {
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import ContentFour from "../components/ContentFour";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -50,6 +54,7 @@ const Home = () => {
         <div>
           <div id="purple-rectangle"></div>
           <img src={yellowContentTwo} id="image-yellow-content-two" />
+          <div id="purple-rectangle2"></div>
         </div>
         <div className="columns">
           <div className="column-one">
@@ -85,16 +90,42 @@ const Home = () => {
               </div>
               <button>ENVIAR</button>
             </form>
-            <div className="text-one">NAS PRÓXIMAS 12h NOSSA EQUIPE ENTRARÁ EM CONTATO COM VOCÊ!</div>
+            <div className="text-one">
+              NAS PRÓXIMAS 12h NOSSA EQUIPE ENTRARÁ EM CONTATO COM VOCÊ!
+            </div>
           </div>
         </div>
-        <div id="purple-rectangle2"></div>
       </div>
       <div className="content-three">
-
+        <div className="column-one">
+          <div>
+            <img src={piramideContentThree} className="image-one" />
+          </div>
+        </div>
+        <div className="column-two">
+          <div>MÉTODO ÚNICO PARA VOCÊ CRESCER!</div>
+          <button>QUERO UMA ESTRATÉGIA PERSONALIZADA</button>
+        </div>
       </div>
-      <div className="content-four"></div>
-      <div className="content-five"></div>
+      <div className="content-four">
+        <div className="text-one">COMO PODEMOS</div>
+        <div className="text-two">AJUDAR?</div>
+        <div>
+          <ContentFour />
+        </div>
+        <button>QUERO DESTACAR MINHA EMPRESA!</button>
+      </div>
+      <div className="content-five">
+        <div className="form-group-one">
+          <div className="text-one">JOVEM,</div>
+          <div className="text-two">TIRE SUA IDEIA DO PAPEL!</div>
+        </div>
+        <div className="form-group-two">
+          <img src={grafic} className="image"/>
+        </div>
+        <div className="form-group-three"></div>
+        <div className="form-group-four"></div>
+      </div>
       <div className="content-six"></div>
     </div>
   );

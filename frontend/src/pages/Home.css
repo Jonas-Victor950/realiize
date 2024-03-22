@@ -17,8 +17,8 @@
   border: 1px solid #650ba4;
   width: 70vw;
   font-size: 1em;
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-weight: 800;
   border-radius: 5px;
 }
@@ -29,8 +29,8 @@
   background-color: #ffd632;
   width: 100vw;
   font-size: 0.8em;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #home .content-one .form-group .yellow-down div {
   width: 30vw;
@@ -44,26 +44,25 @@
 
 #home #purple-rectangle {
   background-color: #650ba4;
-  height: 3vh;
-  margin-top: 13vh;
+  height: 17px;
+  margin-top: 60px;
 }
 
 #home #purple-rectangle2 {
   background-color: #650ba4;
-  height: 3vh;
-  margin-top: 5vh;
+  height: 17px;
+  margin-top: -8px;
 }
 
 #home #image-yellow-content-two {
   width: 100vw;
-  height: 130vh;
-  border: 1px solid red;
+  height: 800px;
   margin-left: 0;
 }
 
 #home .content-two .column-one .text-one {
-  margin-top: -120vh;
-  font-size: 9.1vw;
+  margin-top: -750px;
+  font-size: 32.6px;
   border: 1px solid red;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -75,11 +74,10 @@
 #home .content-two .column-one .text-two {
   font-family: "Questrial", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 00;
   font-style: normal;
-  font-size: 23.5vw;
+  font-size: 85px;
   color: #650ba4;
-  margin-top: -2vh;
+  margin-top: -10px;
 }
 
 #home .content-two .column-one .text-three {
@@ -87,25 +85,25 @@
   width: 76vw;
   margin-left: 12vw;
   border: 1px solid red;
-  font-size: 4.4vw;
+  font-size: 16px;
 }
 
 #home .content-two .column-two .image-one {
-  margin-top: 5vh;
+  margin-top: 30px;
   width: 60vw;
-  height: 20vh;
-  margin-bottom: 5vh;
+  height: 100px;
+  margin-bottom: 30px;
 }
 
 #home .content-two .column-three form div select,
 #home .content-two .column-three form div input {
   width: 60vw;
-  height: 5vh;
-  margin-bottom: 0.7vh;
+  height: 30px;
+  margin-bottom: 5px;
   border-radius: 8px;
   text-align: center;
   border: 1px solid #650ba4; /* Definindo a borda */
-  font-size: 4vw;
+  font-size: 15px;
   background-color: #f4dd83;
   color: #650ba4;
 }
@@ -117,24 +115,114 @@
 }
 
 #home .content-two .column-three form button {
-  width: 15vh;
-  color: #FFD632;
+  width: 25vw;
+  color: #ffd632;
   background-color: #650ba4;
   font-family: "Montserrat", sans-serif;
-  font-size: 4vw;
-  margin-top: 3vh;
+  font-size: 15px;
+  margin-top: 10px;
   border-radius: 8px;
   font-weight: 700;
 }
 
 #home .content-two .column-three .text-one {
   font-family: "Montserrat", sans-serif;
-  color: #650BA4;
+  color: #650ba4;
   width: 60vw;
   margin-left: 20vw;
   margin-top: 5vh;
-  font-size: 3.1vw;
+  font-size: 13px;
   font-weight: 800;
 }
 
 /*End Content-two mobile */
+
+/*Start Content-three mobile */
+
+#home .content-three .column-one .image-one {
+  width: 67vw;
+  align-items: left;
+  image-orientation: left;
+  margin-left: -30vw;
+  margin-top: 150px;
+}
+
+#home .content-three .column-two div {
+  margin-top: -100px;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  font-weight: 800;
+  color: #650ba4;
+  font-size: 1.5em;
+  margin-right: 5vw;
+  margin-left: 50vw;
+}
+
+#home .content-three .column-two button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-right: 10vw;
+  margin-left: 50vw;
+  font-size: 0.8em;
+  border: 1px solid #650ba4; /* Definindo a borda */
+  background-color: #ffd632;
+  border-radius: 8px;
+  margin-top: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #650ba4;
+}
+/*End Content-three mobile */
+
+/*Start Content-four mobile */
+#home .content-four {
+  margin-top: 80px;
+}
+#home .content-four .text-one {
+  font-family: "Questrial", sans-serif;
+  font-size: 3em;
+  color: #650ba4;
+}
+
+#home .content-four .text-two {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  margin-top: -10px;
+  font-size: 5em;
+  color: #650ba4;
+}
+
+#home .content-four button {
+  background-color: #ffd632;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #650ba4;
+  padding: 2px;
+  color: #650ba4;
+}
+
+/*End Content-four mobile */
+
+/*Start Content-five mobile */
+#home .content-five {
+  margin-top: 50px;
+}
+#home .content-five .form-group-two .image {
+  width: 85vw;
+  margin-top: 10px;
+}
+
+#home .content-five .form-group-one .text-one {
+  font-family: "Questrial", sans-serif;
+  font-size: 3em;
+  color: #650ba4;
+}
+
+#home .content-five .form-group-one .text-two {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 2.3em;
+  color: #650ba4;
+}
+
+/*End Content-five mobile */
