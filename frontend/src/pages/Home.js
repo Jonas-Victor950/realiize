@@ -33,16 +33,19 @@ const Home = () => {
       <div className="content-one">
         <div className="form-group">
           <div>
-            <img src={hashtag} id="hashtag" />
+            <div>
+              <img src={hashtag} id="hashtag" />
+            </div>
+            <div>
+              <button>QUERO ALAVANCAR MINHA MARCA!</button>
+            </div>
           </div>
-          <div>
-            <button>QUERO ALAVANCAR MINHA MARCA!</button>
-          </div>
-        </div>
-        <div className="form-group">
+
           <div>
             <img id="gusAndBia" src={gusAndBia} />
           </div>
+        </div>
+        <div className="form-group">
           <div className="yellow-down">
             <div>SOLUÇÃO COMPLETA PARA SUA EMPRESA</div>
             <div>EMPREENDA COM IMPACTO</div>
@@ -155,7 +158,7 @@ const Home = () => {
           Somos uma agência de marketing e consultoria empresarial, fundamentada
           em valores essenciais como transparência, profissionalismo e
           responsabilidade.
-          <br /> <br/>
+          <br /> <br />
           Nossa filosofia é simples, mas poderosa: cada marca é única, e é nossa
           missão tratá-la com a singularidade que merece. Acreditamos firmemente
           que por trás de cada empreendimento há um sonho pulsante. Mais do que
@@ -166,7 +169,7 @@ const Home = () => {
           orientação estratégica e apoio prático. Acreditamos que ao ajudar a
           construir marcas robustas, estamos contribuindo para a realização de
           sonhos.
-          <br /> <br/>
+          <br /> <br />
           Conecte-se conosco e descubra uma parceria onde cada projeto é tratado
           com a dedicação que merece. Aqui, acreditamos no poder dos sonhos e
           nos esforçamos para ser a bússola que guia empreendedores rumo ao
