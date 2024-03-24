@@ -121,11 +121,15 @@ const Home = () => {
           <div className="text-two">TIRE SUA IDEIA DO PAPEL!</div>
         </div>
         <div className="form-group-two">
-          <img src={grafic} className="image"/>
+          <img src={grafic} className="image" />
           <div className="flex-one">
-            <div className="text-one">A Realiize acredita no potencial dessa geração!</div>
+            <div className="text-one">
+              A Realiize acredita no potencial dessa geração!
+            </div>
             <div className="purple-vertical"></div>
-            <div className="text-two">Temos planos EXCLUSIVOS para jovens até 25 anos.</div>
+            <div className="text-two">
+              Temos planos EXCLUSIVOS para jovens até 25 anos.
+            </div>
           </div>
         </div>
         <div className="form-group-three"></div>
@@ -133,19 +137,42 @@ const Home = () => {
           <div className="text-one">QUER NOSSA AJUDA?</div>
           <form className="columns-one">
             <div className="left-side">
-              <input placeholder="NOME"/>
-              <input placeholder="TELEFONE"/>
-              <input placeholder="EMAIL"/>
-              <input placeholder="QUAL SUA IDEIA"/>
+              <input placeholder="NOME" />
+              <input placeholder="TELEFONE" />
+              <input placeholder="EMAIL" />
+              <input placeholder="QUAL SUA IDEIA" />
             </div>
             <div className="right-side">
-              <input placeholder="IDADE"/>
+              <input placeholder="IDADE" />
               <button>ENVIAR</button>
             </div>
           </form>
         </div>
       </div>
-      <div className="content-six"></div>
+      <div className="content-six">
+        <div className="text-one">QUEM SOMOS?</div>
+        <div className="text-two">
+          Somos uma agência de marketing e consultoria empresarial, fundamentada
+          em valores essenciais como transparência, profissionalismo e
+          responsabilidade.
+          <br /> <br/>
+          Nossa filosofia é simples, mas poderosa: cada marca é única, e é nossa
+          missão tratá-la com a singularidade que merece. Acreditamos firmemente
+          que por trás de cada empreendimento há um sonho pulsante. Mais do que
+          prestadores de serviços, somos catalisadores de aspirações,
+          especialmente para os jovens empreendedores que almejam transformar
+          suas visões em realidade. Nosso compromisso vai além do sucesso
+          superficial; buscamos nutrir o potencial empreendedor, fornecendo
+          orientação estratégica e apoio prático. Acreditamos que ao ajudar a
+          construir marcas robustas, estamos contribuindo para a realização de
+          sonhos.
+          <br /> <br/>
+          Conecte-se conosco e descubra uma parceria onde cada projeto é tratado
+          com a dedicação que merece. Aqui, acreditamos no poder dos sonhos e
+          nos esforçamos para ser a bússola que guia empreendedores rumo ao
+          sucesso duradouro.
+        </div>
+      </div>
     </div>
   );
 };
