@@ -3,7 +3,9 @@ import logo from "../images/logoRealiize.png";
 import hashtag from "../images/hashtag.png";
 import gusAndBia from "../images/1.png";
 import yellowContentTwo from "../images/amarelo_content_two.png";
+import yellowTwoContentTwo from "../images/2.png";
 import purpleContentTwo from "../images/4.png";
+import purpleTwoContentTwo from "../images/6.png";
 import piramideContentThree from "../images/3.png";
 import React from "react";
 import grafic from "../images/5.png";
@@ -54,10 +56,13 @@ const Home = () => {
         </div>
       </div>
       <div className="content-two">
-        <div>
+        <div className="before-column">
           <div id="purple-rectangle"></div>
           <img src={yellowContentTwo} id="image-yellow-content-two" />
           <div id="purple-rectangle2"></div>
+        </div>
+        <div className="before-column-desktop">
+          <img src={yellowTwoContentTwo} id="image-yellow-two-content-two" />
         </div>
         <div className="columns">
           <div className="column-one">
@@ -67,9 +72,15 @@ const Home = () => {
               A escolha de responder esse formulário, já te diferencia dos
               concorrentes!
             </div>
+            <div className="text-four">
+              NAS PRÓXIMAS 12h NOSSA EQUIPE ENTRARÁ EM CONTATO COM VOCÊ!
+            </div>
           </div>
           <div className="column-two">
             <img src={purpleContentTwo} className="image-one" />
+          </div>
+          <div className="column-two-two">
+            <img src={purpleTwoContentTwo} className="image-two" />
           </div>
           <div className="column-three">
             <form>

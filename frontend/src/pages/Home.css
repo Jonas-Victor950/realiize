@@ -33,10 +33,10 @@
   padding-bottom: 10px;
 }
 #home .content-one .form-group .yellow-down div {
-  width: 30vw;
+  width: 25vw;
   color: #650ba4;
   font-family: "Questrial", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -60,10 +60,13 @@
   margin-left: 0;
 }
 
+#home .content-two .before-column-desktop {
+  display: none;
+}
+
 #home .content-two .column-one .text-one {
   margin-top: -750px;
   font-size: 32.6px;
-  border: 1px solid red;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -81,11 +84,14 @@
 }
 
 #home .content-two .column-one .text-three {
+  font-family: "Questrial", sans-serif;
   color: #650ba4;
   width: 76vw;
   margin-left: 12vw;
-  border: 1px solid red;
   font-size: 16px;
+}
+#home .content-two .column-one .text-four {
+  display: none;
 }
 
 #home .content-two .column-two .image-one {
@@ -93,6 +99,10 @@
   width: 60vw;
   height: 100px;
   margin-bottom: 30px;
+}
+
+#home .content-two .column-two-two {
+  display: none;
 }
 
 #home .content-two .column-three form div select,
@@ -358,7 +368,7 @@
     width: 35vw;
     margin-left: 5vw;
   }
-  
+
   #home .content-one .form-group #gusAndBia {
     width: 45vw;
     align-items: right;
@@ -372,11 +382,110 @@
   #home .content-one .form-group .yellow-down {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #ffd632;
     width: 100vw;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
+  /*Start content-two desktop */
+  #home .content-two .before-column {
+    display: none;
+  }
+
+  #home .content-two .before-column-desktop {
+    display: block;
+  }
+
+  #home #image-yellow-two-content-two {
+    width: 100vw;
+    height: 700px;
+    margin-left: 0;
+    margin-top: 100px;
+  }
+
+  #home .content-two .columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #home .content-two .columns .column-three {
+    width: 30vw;
+    margin-top: -690px;
+  }
+
+  #home .content-two .columns .column-one {
+    width: 30vw;
+    margin-top: -690px;
+  }
+
+  #home .content-two .column-one .text-one {
+    margin-top: -30px;
+    font-size: 3.5vw;
+  }
+
+  #home .content-two .column-one .text-two {
+    font-size: 9vw;
+  }
+
+  #home .content-two .column-one .text-three {
+    font-size: 2vw;
+    text-align: left;
+    margin-left: 1vw;
+    width: 28vw;
+  }
+  #home .content-two .column-one .text-four {
+    font-family: "Montserrat", sans-serif;
+    width: 28vw;
+    display: block;
+    color: #650ba4;
+    margin-top: 50px;
+    font-weight: 800;
+    margin-left: 1vw;
+    text-align: left;
+    font-size: 2vw;
+  }
+
+  #home .content-two .column-two {
+    display: none;
+  }
+
+  #home .content-two .column-two-two {
+    display: block;
+    width: 10vw;
+    margin-top: -690px;
+  }
+
+  #home .content-two .column-two-two .image-two {
+    width: 10vw;
+  }
+
+  #home .content-two .column-three form div select,
+  #home .content-two .column-three form div input {
+    width: 30vw;
+    font-size: 1.5vw;
+  }
+
+  #home .content-two .column-three form div select::placeholder,
+  #home .content-two .column-three form div input::placeholder {
+    font-family: "Questrial", sans-serif;
+    color: #650ba4;
+  }
+
+  #home .content-two .column-three form button {
+    width: 10vw;
+  }
+
+  #home .content-two .column-three .text-one {
+    display: none;
+  }
+
+  /*End content-two desktop */
+
+  /*Start content-three desktop */
+  /*End content-three desktop */
 }
