@@ -487,5 +487,33 @@
   /*End content-two desktop */
 
   /*Start content-three desktop */
+
+  #home .content-three .column-one .image-one {
+    width: 40vw;
+    align-items: left;
+    image-orientation: left;
+    margin-left: -30vw;
+    margin-top: 150px;
+  }
+  
+  #home .content-three .column-two div {
+    margin-top: -200px;
+    font-size: 3vw;
+    margin-right: 5vw;
+    margin-left: 60vw;
+    width: 30vw;
+  }
+  
+  #home .content-three .column-two button {
+    margin-right: -5vw;
+    margin-left: 40vw;
+    font-size: 1.0vw;
+    border: 1px solid #650ba4; /* Definindo a borda */
+    background-color: #ffd632;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding:5px;
+    color: #650ba4;
+  }
   /*End content-three desktop */
 }
