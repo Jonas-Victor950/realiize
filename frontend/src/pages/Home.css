@@ -185,17 +185,17 @@
 }
 /*End Content-three mobile */
 
-/*Start Content-four mobile */
-#home .content-four {
+/*Start Content-foury mobile */
+#home .content-foury {
   margin-top: 80px;
 }
-#home .content-four .text-one {
+#home .content-foury .text-one-y {
   font-family: "Questrial", sans-serif;
   font-size: 3em;
   color: #650ba4;
 }
 
-#home .content-four .text-two {
+#home .content-foury .text-two-y {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   margin-top: -10px;
@@ -203,16 +203,16 @@
   color: #650ba4;
 }
 
-#home .content-four button {
+#home .content-foury button {
   background-color: #ffd632;
   margin-top: 10px;
   border-radius: 4px;
-  border: 1px solid #650ba4;
-  padding: 2px;
+  border: 2px solid #650ba4;
+  padding: 5px;
   color: #650ba4;
 }
 
-/*End Content-four mobile */
+/*End Content-foury mobile */
 
 /*Start Content-five mobile */
 #home .content-five {
@@ -344,7 +344,7 @@
   font-family: "Questrial", sans-serif;
   color: #650ba4;
   width: 80vw;
-  text-align: center;
+  text-align:center;
   margin-left: 10vw;
   font-size: 13px;
 }
@@ -516,4 +516,24 @@
     color: #650ba4;
   }
   /*End content-three desktop */
+
+  /*Start content-foury desktop */
+  #home .content-foury {
+    margin-top: 180px;
+  }
+  #home .content-foury .text-one-y {
+    font-size: 5em;
+  }
+  
+  #home .content-foury .text-two-y {
+    font-size: 8em;
+  }
+  
+  #home .content-foury button {
+    margin-top: 10px;
+    padding: 2px;
+    font-size: 1.6vw;
+  }
+  /*End content-foury desktop */
+
 }

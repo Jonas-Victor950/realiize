@@ -1,59 +1,100 @@
 .content-fourth {
-  margin-left: 10vw !important;
-  font-size: 0.1em !important;
+  margin-left: 10vw ;
+  font-size: 0.1em ;
 }
 
 .content-fourth .content {
-  height: 300px !important;
+  height: 300px ;
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #FFD632;
+  background-color: #ffd632;
   border-radius: 10px;
   border: 2px solid #650ba4;
   margin-right: 10vw; /* Ajuste da margem direita */
 }
 .content-fourth .content .text-one {
-  font-family: "Montserrat", sans-serif !important;
-  font-weight: 800 !important;
-  font-size: 20px !important;
+  font-family: "Montserrat", sans-serif ;
+  font-weight: 800 ;
+  color: #650ba4;
+  font-size: 20px;
   text-align: left;
 }
 
 .content-fourth .content .text-two {
-    font-family: "Montserrat", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 11px !important;
-    margin-top: 5px !important;
-    text-align: left !important;
-    margin-bottom: 2px !important;
-    color: #650ba4 !important;
+  font-family: "Montserrat", sans-serif ;
+  font-weight: 700 ;
+  font-size: 11px ;
+  margin-top: 5px ;
+  text-align: left ;
+  margin-bottom: 2px ;
+  color: #650ba4 ;
 }
 
 .content-fourth .content .text-three {
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 11px !important;
-    text-align: left !important;
-    margin-left: 2vw !important;
-    color: #650ba4 !important;
+  font-family: "Montserrat", sans-serif ;
+  font-size: 11px ;
+  text-align: left ;
+  margin-left: 2vw ;
+  color: #650ba4 ;
 }
 
 .content-fourth .content .text-four {
-    font-family: "Montserrat", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 11px !important;
-    margin-top: 5px !important;
-    text-align: left !important;
-    margin-bottom: 2px !important;
-    color: #650ba4 !important;
+  font-family: "Montserrat", sans-serif ;
+  font-weight: 700 ;
+  font-size: 11px ;
+  margin-top: 5px ;
+  text-align: left ;
+  margin-bottom: 2px ;
+  color: #650ba4 ;
 }
 
 .content-fourth .content .text-five {
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 11px !important;
-    text-align: left !important;
-    margin-left: 2vw !important;
-    color: #650ba4 !important;
+  font-family: "Montserrat", sans-serif ;
+  font-size: 11px ;
+  text-align: left ;
+  margin-left: 2vw ;
+  color: #650ba4 ;
+  width: 45vw;
+}
+
+@media screen and (min-width: 700px) {
+
+  .content-fourth .content {
+    height: 500px ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    margin-right: 10vw; /* Ajuste da margem direita */
+  }
+  .content-fourth .content .text-one {
+    font-size: 4vw;
+  }
+
+  .content-fourth .content .text-two {
+    font-size: 20px ;
+    margin-top: 10px ;
+    text-align: left ;
+    margin-bottom: 4px ;
+  }
+
+  .content-fourth .content .text-three {
+    font-size: 20px ;
+  }
+
+  .content-fourth .content .text-four {
+    font-size: 20px ;
+    margin-top: 10px ;
+    margin-bottom: 4px ;
+  }
+
+  .content-fourth .content .text-five {
+    font-family: "Montserrat", sans-serif ;
+    font-size: 20px ;
+    text-align: left ;
+    margin-left: 2vw ;
+    color: #650ba4 ;
     width: 45vw;
+  }
 }

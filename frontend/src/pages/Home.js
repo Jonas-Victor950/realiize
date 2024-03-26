@@ -121,9 +121,9 @@ const Home = () => {
           <button>QUERO UMA ESTRATÉGIA PERSONALIZADA</button>
         </div>
       </div>
-      <div className="content-four">
-        <div className="text-one">COMO PODEMOS</div>
-        <div className="text-two">AJUDAR?</div>
+      <div className="content-foury">
+        <div className="text-one-y">COMO PODEMOS</div>
+        <div className="text-two-y">AJUDAR?</div>
         <div>
           <ContentFour />
         </div>
