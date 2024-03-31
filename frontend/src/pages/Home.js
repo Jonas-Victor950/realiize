@@ -7,7 +7,7 @@ import yellowTwoContentTwo from "../images/2.png";
 import purpleContentTwo from "../images/4.png";
 import purpleTwoContentTwo from "../images/6.png";
 import piramideContentThree from "../images/3.png";
-import React from "react";
+import React, { useRef } from "react";
 import grafic from "../images/5.png";
 
 // Components
@@ -27,6 +27,11 @@ import ContentFour from "../components/ContentFour";
 
 const Home = () => {
   const navigate = useNavigate();
+  const contentTwoRef = useRef(null); // Referência para o elemento content-two
+
+  const handleScrollToContentTwo = () => {
+    contentTwoRef.current.scrollIntoView({ behavior: "smooth" }); // Rolagem suave até o content-two
+  };
 
   const dispatch = useDispatch();
 
@@ -39,7 +44,7 @@ const Home = () => {
               <img src={hashtag} id="hashtag" />
             </div>
             <div>
-              <button>QUERO ALAVANCAR MINHA MARCA!</button>
+              <button onClick={handleScrollToContentTwo}>QUERO ALAVANCAR MINHA MARCA!</button>
             </div>
           </div>
 
@@ -55,7 +60,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="content-two">
+      <div className="content-two" ref={contentTwoRef}>
         <div className="before-column">
           <div id="purple-rectangle"></div>
           <img src={yellowContentTwo} id="image-yellow-content-two" />
@@ -118,7 +123,7 @@ const Home = () => {
         </div>
         <div className="column-two">
           <div>MÉTODO ÚNICO PARA VOCÊ CRESCER!</div>
-          <button>QUERO UMA ESTRATÉGIA PERSONALIZADA</button>
+          <button onClick={handleScrollToContentTwo}>QUERO UMA ESTRATÉGIA PERSONALIZADA</button>
         </div>
       </div>
       <div className="content-foury">
@@ -127,7 +132,7 @@ const Home = () => {
         <div>
           <ContentFour />
         </div>
-        <button>QUERO DESTACAR MINHA EMPRESA!</button>
+        <button onClick={handleScrollToContentTwo}>QUERO DESTACAR MINHA EMPRESA!</button>
       </div>
       <div className="content-five">
         <div className="form-group-one">
@@ -146,7 +151,38 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="form-group-three"></div>
+        <div className="form-group-two-two">
+          <div className="flex-one">
+            <div className="texts">
+              <div className="text-one">
+                A Realiize acredita no potencial dessa geração!
+              </div>
+              <div className="text-two">
+                Temos planos EXCLUSIVOS para jovens até 25 anos.
+              </div>
+            </div>
+
+            <div className="purple-vertical"></div>
+            <img src={grafic} className="image" />
+          </div>
+        </div>
+        <div className="form-group-three">
+          <div className="text-one">QUER NOSSA AJUDA?</div>
+          <form className="columns-one">
+            <div className="left-side">
+              <input placeholder="NOME" />
+              <input placeholder="TELEFONE" />
+            </div>
+            <div className="middle-side">
+              <input placeholder="EMAIL" />
+              <input placeholder="QUAL SUA IDEIA" />
+            </div>
+            <div className="right-side">
+              <input placeholder="IDADE" />
+              <button>ENVIAR</button>
+            </div>
+          </form>
+        </div>
         <div className="form-group-four">
           <div className="text-one">QUER NOSSA AJUDA?</div>
           <form className="columns-one">

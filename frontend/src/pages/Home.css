@@ -219,6 +219,10 @@
   margin-top: 50px;
 }
 
+#home .content-five .form-group-two-two {
+  display: none;
+}
+
 #home .content-five .form-group-two .flex-one {
   font-family: "Questrial", sans-serif;
   font-size: 0.85em;
@@ -255,6 +259,10 @@
   font-weight: 800;
   font-size: 2.3em;
   color: #650ba4;
+}
+
+#home .content-five .form-group-three {
+  display: none;
 }
 
 #home .content-five .form-group-four {
@@ -344,9 +352,10 @@
   font-family: "Questrial", sans-serif;
   color: #650ba4;
   width: 80vw;
-  text-align:center;
+  text-align: start;
   margin-left: 10vw;
   font-size: 13px;
+  padding-bottom: 60px;
 }
 
 /*End Content-six mobile */
@@ -495,7 +504,7 @@
     margin-left: -30vw;
     margin-top: 150px;
   }
-  
+
   #home .content-three .column-two div {
     margin-top: -200px;
     font-size: 3vw;
@@ -503,16 +512,16 @@
     margin-left: 60vw;
     width: 30vw;
   }
-  
+
   #home .content-three .column-two button {
     margin-right: -5vw;
     margin-left: 40vw;
-    font-size: 1.0vw;
+    font-size: 1vw;
     border: 1px solid #650ba4; /* Definindo a borda */
     background-color: #ffd632;
     border-radius: 8px;
     margin-top: 15px;
-    padding:5px;
+    padding: 5px;
     color: #650ba4;
   }
   /*End content-three desktop */
@@ -524,11 +533,11 @@
   #home .content-foury .text-one-y {
     font-size: 5em;
   }
-  
+
   #home .content-foury .text-two-y {
     font-size: 8em;
   }
-  
+
   #home .content-foury button {
     margin-top: 10px;
     padding: 2px;
@@ -536,4 +545,192 @@
   }
   /*End content-foury desktop */
 
+  /*Start Content-five desktop */
+  #home .content-five {
+    margin-top: 100px;
+  }
+
+  #home .content-five .form-group-two {
+    display: none;
+  }
+
+  /* #home .content-five .form-group-two .flex-one {
+    font-family: "Questrial", sans-serif;
+    font-size: 0.85em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #650ba4;
+  }
+
+  #home .content-five .form-group-two .flex-one .text-one,
+  #home .content-five .form-group-two .flex-one .text-two {
+    padding-top: 8px;
+  }
+
+  #home .content-five .form-group-two .flex-one .purple-vertical {
+    width: 5px;
+    background-color: #650ba4;
+    height: 50px;
+  }
+  #home .content-five .form-group-two .image {
+    width: 85vw;
+    margin-top: 10px;
+  } */
+
+  #home .content-five .form-group-one .text-one {
+    font-size: 5vw;
+  }
+
+  #home .content-five .form-group-one .text-two {
+    font-size: 5vw;
+  }
+
+  #home .content-five .form-group-two-two {
+    display: flex;
+  }
+
+  #home .content-five .form-group-two-two .flex-one {
+    font-family: "Questrial", sans-serif;
+    font-size: 0.85em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #650ba4;
+    gap: 3vw;
+  }
+
+  #home .content-five .form-group-two-two .flex-one .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 8px;
+    font-size: 1.7vw;
+    margin-left: 5vw;
+    text-align: left;
+  }
+
+  #home .content-five .form-group-two-two .flex-one .purple-vertical {
+    width: 5px;
+    background-color: #650ba4;
+    height: 100%;
+  }
+  #home .content-five .form-group-two-two .image {
+    width: 55vw;
+    margin-top: 10px;
+    height: 150px;
+    margin-right: 30px;
+  }
+
+  #home .content-five .form-group-three {
+    display: block;
+    margin-top: 60px;
+    width: 100vw;
+  }
+  #home .content-five .form-group-four {
+    display: none;
+  }
+
+  #home .content-five .form-group-three .text-one {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    color: #650ba4;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 7vw;
+  }
+
+  #home .content-five .form-group-three .columns-one {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+  }
+
+  #home .content-five .form-group-three .columns-one .left-side,
+  #home .content-five .form-group-three .columns-one .middle-side {
+    width: 35vw;
+  }
+  #home .content-five .form-group-three .columns-one .right-side {
+    width: 10vw;
+  }
+
+  #home .content-five .form-group-three .columns-one .left-side input,
+  #home .content-five .form-group-three .columns-one .middle-side input {
+    width: 35vw;
+    height: 30px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #650ba4; /* Definindo a borda */
+    font-size: 15px;
+    background-color: #f4dd83;
+    color: #650ba4;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #home
+    .content-five
+    .form-group-three
+    .columns-one
+    .left-side
+    input::placeholder,
+  #home
+    .content-five
+    .form-group-three
+    .columns-one
+    .middle-side
+    input::placeholder {
+    font-family: "Questrial", sans-serif;
+    color: #650ba4;
+  }
+
+  #home .content-five .form-group-three .columns-one .right-side input {
+    font-family: "Montserrat", sans-serif;
+    border-radius: 120px;
+    height: 30px;
+    width: 10vw;
+    margin-top: -3px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #ffd632;
+    border: 1px solid #650ba4;
+  }
+  #home
+    .content-five
+    .form-group-three
+    .columns-one
+    .right-side
+    input::placeholder {
+    font-family: "Questrial", sans-serif;
+    color: #650ba4;
+  }
+
+  #home .content-five .form-group-three .columns-one .right-side button {
+    background-color: #ffd632;
+    font-size: 1em;
+    border: 1px solid #650ba4;
+    border-radius: 8px;
+    color: #650ba4;
+    padding: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+  }
+  /*End Content-five desktop */
+
+  /*Start Content-six desktop */
+  #home .content-six .text-one {
+    font-size: 5vw;
+    color: #650ba4;
+    margin-bottom: 10px;
+    margin-top: 150px;
+  }
+
+  #home .content-six .text-two {
+    font-size: 2vw;
+    padding-bottom: 60px;
+  }
+  /*End Content-six desktop */
 }
