@@ -5,7 +5,7 @@ import { Jovem, IJovem } from "../models/Jovem";
 
 const JovemController = {
   async createJovem(req: Request, res: Response) {
-    const { name, email, idea, phone, age } = req.body;
+    const { name, email, idea, phone, age, nicho, budget } = req.body;
 
     const jovemObj: IJovem = {
       name,
@@ -13,6 +13,8 @@ const JovemController = {
       idea,
       phone,
       age,
+      nicho,
+      budget,
     };
 
     if (await Jovem.findOne({ $or: [{ email: email }] })) {
@@ -23,10 +25,10 @@ const JovemController = {
 
         // const zap = await sender.sendText(telefone, message);
 
-        Logger.info("Jovem cadastrado com sucesso!");
+        Logger.info("Cadastrado com sucesso!");
         return res.status(201).json({
           success: true,
-          msg: "Jovem cadastrado com sucesso!",
+          msg: "Cadastrado com sucesso!",
           jovem: jovem,
         });
       } catch (error) {
@@ -39,4 +41,4 @@ const JovemController = {
   },
 };
 
-export default JovemController
+export default JovemController;
