@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import mongoose from "mongoose";
 import Logger from "../database/logger";
 import { Jovem, IJovem } from "../models/Jovem";
+import { sendEmail } from "../services/emailService";
 
 const JovemController = {
   async createJovem(req: Request, res: Response) {
@@ -24,8 +25,13 @@ const JovemController = {
     } else {
       try {
         const jovem = await Jovem.create(jovemObj);
+        console.log(jovem);
 
-        // const zap = await sender.sendText(telefone, message);
+        const emailText = `
+        <p>Fala zé mamão </p>
+        <p>${jovem} </p>`;
+
+        const send = await sendEmail(emailText);
 
         Logger.info("Cadastrado com sucesso!");
         return res.status(201).json({
