@@ -8,6 +8,7 @@ interface IJovem {
   age?: string;
   nicho?: string;
   budget?: string;
+  company?: string;
 }
 
 const jovemSchema = new Schema<IJovem>(
@@ -19,6 +20,7 @@ const jovemSchema = new Schema<IJovem>(
     age: { type: String },
     nicho: { type: String },
     budget: { type: String },
+    company: { type: String },
   },
   {
     timestamps: true,

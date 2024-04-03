@@ -5,7 +5,8 @@ import { Jovem, IJovem } from "../models/Jovem";
 
 const JovemController = {
   async createJovem(req: Request, res: Response) {
-    const { name, email, idea, phone, age, nicho, budget } = req.body;
+    const { name, email, idea, phone, age, nicho, budget, company } = req.body;
+    console.log(name, email, idea, phone, age, nicho, budget, company);
 
     const jovemObj: IJovem = {
       name,
@@ -15,6 +16,7 @@ const JovemController = {
       age,
       nicho,
       budget,
+      company,
     };
 
     if (await Jovem.findOne({ $or: [{ email: email }] })) {
