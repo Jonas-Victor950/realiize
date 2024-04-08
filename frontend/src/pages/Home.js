@@ -10,6 +10,9 @@ import piramideContentThree from "../images/3.png";
 import React, { useRef } from "react";
 import grafic from "../images/5.png";
 
+// Redux
+import { createUser } from "../slices/userSlice";
+
 // Components
 import { NavLink, Link } from "react-router-dom";
 
@@ -21,13 +24,29 @@ import ContentFour from "../components/ContentFour";
 
 const Home = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { loading, message, error } = useSelector((state) => state.user);
+
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [idea, setIdea] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const [age, setAge] = useState(null);
+  const [nicho, setNicho] = useState(null);
+  const [budget, setBudget] = useState(null);
+  const [company, setCompany] = useState(null);
+
+  const [isSideNavbarOpen, setIsSideNavbarOpen] = useState(false);
+
   const contentTwoRef = useRef(null); // Referência para o elemento content-two
-  const contentFourRef = useRef(null)
-  const contentFiveRef = useRef(null)
-  const contentSixRef = useRef(null)
+  const contentFourRef = useRef(null);
+  const contentFiveRef = useRef(null);
+  const contentSixRef = useRef(null);
 
   const handleScrollToContentTwo = () => {
     contentTwoRef.current.scrollIntoView({ behavior: "smooth" }); // Rolagem suave até o content-two
+    toggleSideNavbar();
   };
 
   const handleScrollToContentFour = () => {
@@ -40,7 +59,37 @@ const Home = () => {
     contentSixRef.current.scrollIntoView({ behavior: "smooth" }); // Rolagem suave até o content-two
   };
 
-  const dispatch = useDispatch();
+  const toggleSideNavbar = () => {
+    setIsSideNavbarOpen(!isSideNavbarOpen);
+  };
+
+  const handleSubmitCreateUser = async (e) => {
+    e.preventDefault();
+
+    const userData = {
+      name,
+      email,
+      idea,
+      phone,
+      age,
+      nicho,
+      budget,
+      company,
+    };
+
+    const createUser1 = await dispatch(createUser(userData));
+
+    if (createUser1.type === "user/create/fulfilled") {
+      window.location.reload();
+    } else {
+      alert(createUser1.payload);
+      console.log(createUser1);
+    }
+  };
+
+  if (loading) {
+    return <p>Loading</p>;
+  }
 
   return (
     <>
@@ -49,12 +98,38 @@ const Home = () => {
           <img id="image" src={logo}></img>
         </div>
         <div className="right">
-          <div id="hamburger">&#9776;</div>
-          <button id="span" onClick={handleScrollToContentFour}>SERVIÇOS</button>
-          <button id="span" onClick={handleScrollToContentFive}>SEJA UM JOVEM EMPREENDEDOR</button>
-          <button id="span" onClick={handleScrollToContentSix}>QUEM SOMOS</button>
+          <div id="hamburger" onClick={toggleSideNavbar}>
+            &#9776;
+          </div>
+          <button id="span" onClick={handleScrollToContentFour}>
+            SERVIÇOS
+          </button>
+          <button id="span" onClick={handleScrollToContentFive}>
+            SEJA UM JOVEM EMPREENDEDOR
+          </button>
+          <button id="span" onClick={handleScrollToContentSix}>
+            QUEM SOMOS
+          </button>
         </div>
       </nav>
+      <div
+        id="sideNavbar"
+        className={isSideNavbarOpen ? "active" : "notActive"}
+      >
+        <div>
+          <div>
+            <button id="span" onClick={handleScrollToContentFour}>
+              SERVIÇOS
+            </button>
+            <button id="span" onClick={handleScrollToContentSix}>
+              QUEM SOMOS
+            </button>
+            <button id="span" onClick={handleScrollToContentFive}>
+              SEJA UM JOVEM EMPREENDEDOR
+            </button>
+          </div>
+        </div>
+      </div>
       <div id="home">
         <div className="content-one">
           <div className="form-group">
@@ -109,26 +184,52 @@ const Home = () => {
               <img src={purpleTwoContentTwo} className="image-two" />
             </div>
             <div className="column-three">
-              <form>
+              <form onSubmit={handleSubmitCreateUser}>
                 <div>
-                  <input placeholder="NOME COMPLETO"></input>
+                  <input
+                    placeholder="NOME COMPLETO"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  ></input>
                 </div>
                 <div>
-                  <input placeholder="TELEFONE"></input>
+                  <input
+                    placeholder="TELEFONE"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
+                  ></input>
                 </div>
                 <div>
-                  <input placeholder="EMAIL"></input>
+                  <input
+                    placeholder="EMAIL"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  ></input>
                 </div>
                 <div>
-                  <input placeholder="EMPRESA"></input>
+                  <input
+                    placeholder="EMPRESA"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    required
+                  ></input>
                 </div>
                 <div>
-                  <select></select>
+                  <select
+                    value={nicho}
+                    onChange={(e) => setNicho(e.target.value)}
+                  ></select>
                 </div>
                 <div>
-                  <select></select>
+                  <select
+                    value={budget}
+                    onChange={(e) => setBudget(e.target.value)}
+                  ></select>
                 </div>
-                <button>ENVIAR</button>
+                <button type="submit">ENVIAR</button>
               </form>
               <div className="text-one">
                 NAS PRÓXIMAS 12h NOSSA EQUIPE ENTRARÁ EM CONTATO COM VOCÊ!
@@ -193,17 +294,42 @@ const Home = () => {
           </div>
           <div className="form-group-three">
             <div className="text-one">QUER NOSSA AJUDA?</div>
-            <form className="columns-one">
+            <form className="columns-one" onSubmit={handleSubmitCreateUser}>
               <div className="left-side">
-                <input placeholder="NOME" />
-                <input placeholder="TELEFONE" />
+                <input
+                  placeholder="NOME"
+                  value={name}
+                  required
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                  placeholder="TELEFONE"
+                  value={phone}
+                  required
+                  onChange={(e) => setPhone(e.target.value)}
+                />
               </div>
               <div className="middle-side">
-                <input placeholder="EMAIL" />
-                <input placeholder="QUAL SUA IDEIA" />
+                <input
+                  placeholder="EMAIL"
+                  value={email}
+                  required
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  placeholder="QUAL SUA IDEIA"
+                  value={idea}
+                  required
+                  onChange={(e) => setIdea(e.target.value)}
+                />
               </div>
               <div className="right-side">
-                <input placeholder="IDADE" />
+                <input
+                  placeholder="IDADE"
+                  value={age}
+                  required
+                  onChange={(e) => setAge(e.target.value)}
+                />
                 <button>ENVIAR</button>
               </div>
             </form>
@@ -219,7 +345,7 @@ const Home = () => {
               </div>
               <div className="right-side">
                 <input placeholder="IDADE" />
-                <button>ENVIAR</button>
+                <button type="submit">ENVIAR</button>
               </div>
             </form>
           </div>

@@ -11,7 +11,8 @@ const initialState = {
 };
 
 // Create a User
-export const createUser = createAsyncThunk("user/create", async (user) => {
+export const createUser = createAsyncThunk("user/create", async (user, thunkAPI) => {
+  console.log(user)
   const data = await userService.createUser(user);
 
   // Check for errors

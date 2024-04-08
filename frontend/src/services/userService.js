@@ -2,6 +2,7 @@ import { api, requestConfig } from "../utils/config";
 
 // Create a User
 const createUser = async (data) => {
+  console.log(data)
   const config = requestConfig("POST", data, null, false);
 
   try {
