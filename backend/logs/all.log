@@ -36,3 +36,13 @@
 2024-04-03 20:44:41 - [32minfo[39m: [32m😄 Conectado com sucesso ao banco de dados![39m
 2024-04-03 20:45:34 - [32minfo[39m: [32m🚀 Projeto rodando no endereço: http://127.0.0.1:3000[39m
 2024-04-03 20:45:34 - [32minfo[39m: [32m😄 Conectado com sucesso ao banco de dados![39m
+2024-04-07 19:41:10 - [32minfo[39m: [32m🚀 Projeto rodando no endereço: http://127.0.0.1:3000[39m
+2024-04-07 19:41:10 - [32minfo[39m: [32m😄 Conectado com sucesso ao banco de dados![39m
+2024-04-07 20:29:28 - [31merror[39m: [31mJovem validation failed: name: Path `name` is required., email: Path `email` is required., phone: Path `phone` is required.[39m
+2024-04-07 20:38:30 - [31merror[39m: [31mJovem validation failed: name: Path `name` is required., email: Path `email` is required., phone: Path `phone` is required.[39m
+2024-04-07 20:45:35 - [32minfo[39m: [32mCadastrado com sucesso![39m
+2024-04-08 20:11:07 - [31merror[39m: [31mJovem validation failed: name: Path `name` is required., email: Path `email` is required., phone: Path `phone` is required.[39m
+2024-04-08 20:14:15 - [32minfo[39m: [32m🚀 Projeto rodando no endereço: http://127.0.0.1:3000[39m
+2024-04-08 20:14:15 - [32minfo[39m: [32m😄 Conectado com sucesso ao banco de dados![39m
+2024-04-08 20:14:45 - [32minfo[39m: [32mCadastrado com sucesso![39m
+2024-04-08 20:17:19 - [32minfo[39m: [32mCadastrado com sucesso![39m

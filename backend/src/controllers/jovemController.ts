@@ -21,7 +21,7 @@ const JovemController = {
     };
 
     if (await Jovem.findOne({ $or: [{ email: email }] })) {
-      return res.status(422).json("Email já cadastrado!");
+      return res.status(422).json({errors: ["Email já cadastrado!"]});
     } else {
       try {
         const jovem = await Jovem.create(jovemObj);
