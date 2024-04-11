@@ -4,6 +4,7 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import logo from "../images/logoRealiize.png";
+import sideArrow from "../images/91.png";
 import hashtag from "../images/hashtag.png";
 import "./ContentFour.css";
 
@@ -21,12 +22,16 @@ const ContentFour = () => {
   const PrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", left: "-30px", zIndex: 1}}
-        onClick={onClick}
-      >
-        <BsArrowLeftCircleFill />
+      <div>
+        <img
+          className={className}
+          onClick={onClick}
+          src={sideArrow}
+          style={{
+            width: "20px",
+            transform: "rotate(180deg)",
+          }}
+        />
       </div>
     );
   };
@@ -34,12 +39,13 @@ const ContentFour = () => {
   const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", right: "-30px", zIndex: 1 }}
-        onClick={onClick}
-      >
-        <BsArrowRightCircleFill />
+      <div>
+        <img
+          src={sideArrow}
+          className={className}
+          onClick={onClick}
+          style={{ width: "20px", zIndex: 1000 }}
+        />
       </div>
     );
   };
@@ -56,17 +62,13 @@ const ContentFour = () => {
     nextArrow: <NextArrow />,
   };
 
-  
-
   return (
     <div className="content-fourth">
       <div style={{ width: "80vw" }}>
         <Slider {...settings} ref={sliderRef}>
           <div className="content">
             <div className="text-one">MARKETING</div>
-            <div className="text-two">
-              Gestão Estratégica de Redes Sociais:
-            </div>
+            <div className="text-two">Gestão Estratégica de Redes Sociais:</div>
             <div className="text-three">
               • Planejamento e criação de estratégias.
             </div>
