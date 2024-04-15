@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import logo from "../images/logoRealiize.png";
 import sideArrow from "../images/91.png";
 import hashtag from "../images/hashtag.png";
+import service1 from "../images/8.png";
 import "./ContentFour.css";
 
 const ContentFour = () => {
@@ -80,21 +81,19 @@ const ContentFour = () => {
             </div>
             <div className="text-four">Criação de Artes e Edições:</div>
             <div className="text-five">
-              • Produção de vídeos e imagens profissionais.
-            </div>
-            <div className="text-five">
-              • Alinhamento com a estratégia definida.
-            </div>
-            <div className="text-five">
-              • Foco na qualidade e objetivos online.
-            </div>
-            <div className="text-five">
-              • Design profissional para panfletos, cartões, banners...
-            </div>
-            <div className="text-five">
-              • Comunicação efetiva da mensagem desejada.
+              <div className="texts">
+                • Produção de vídeos e imagens profissionais. <br></br>•
+                Alinhamento com a estratégia definida.
+                <br></br>• Foco na qualidade e objetivos online. <br></br>•
+                Design profissional para panfletos, cartões, banners...{" "}
+                <br></br>• Comunicação efetiva da mensagem desejada.
+              </div>
+              <div className="img">
+                <img src={service1} alt="" />
+              </div>
             </div>
           </div>
+
           <div className="content">
             <img src={hashtag} alt="Descrição da imagem 2" />
             <h2>Título do Slide 2</h2>

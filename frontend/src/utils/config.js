@@ -1,4 +1,4 @@
-export const api = "http://localhost:3000";
+export const api = "http://localhost:6000";
 
 export const requestConfig = (method, data, token = null, image = null) => {
   console.log(data, token);
