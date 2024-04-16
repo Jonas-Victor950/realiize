@@ -7,6 +7,7 @@ import logo from "../images/logoRealiize.png";
 import sideArrow from "../images/91.png";
 import hashtag from "../images/hashtag.png";
 import service1 from "../images/8.png";
+import service2 from "../images/7.png"
 import "./ContentFour.css";
 
 const ContentFour = () => {
@@ -95,9 +96,20 @@ const ContentFour = () => {
           </div>
 
           <div className="content">
-            <img src={hashtag} alt="Descrição da imagem 2" />
-            <h2>Título do Slide 2</h2>
-            <p>Texto do Slide 2</p>
+            <div className="text-one">TRÁFEGO PAGO</div>
+            <div className="text-two">Gestão de Tráfego Pago:</div>
+            <div className="text-five">
+              <div className="texts">
+                • Estratégias para impulsionar tráfego em plataformas
+                específicas. <br></br>• Criação de campanhas pagas e seleção de
+                canais adequados.
+                <br></br>• Otimização contínua com base em análises para metas
+                específicas.
+              </div>
+              <div className="img2">
+                <img src={service2} alt="" />
+              </div>
+            </div>
           </div>
         </Slider>
       </div>
