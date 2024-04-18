@@ -7,7 +7,9 @@ import logo from "../images/logoRealiize.png";
 import sideArrow from "../images/91.png";
 import hashtag from "../images/hashtag.png";
 import service1 from "../images/8.png";
-import service2 from "../images/7.png"
+import service2 from "../images/7.png";
+import service3 from "../images/14.png";
+import service4 from "../images/11.png"
 import "./ContentFour.css";
 
 const ContentFour = () => {
@@ -108,6 +110,59 @@ const ContentFour = () => {
               </div>
               <div className="img2">
                 <img src={service2} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="content">
+            <div className="text-one">PRESENÇA ONLINE</div>
+            <div className="text-two">Desenvolvimento de Site:</div>
+            <div className="text-three">
+              • Criação de páginas web personalizadas.
+            </div>
+            <div className="text-three">
+              • Layout visual atrativo e organização clara.
+            </div>
+            <div className="text-three">
+              • Funcionalidades interativas e acessibilidade.
+            </div>
+            <div className="text-four">Formatação de Marketplace:</div>
+            <div className="text-five">
+              <div className="texts">
+                • Integração com principais marketplaces. <br></br>• Atualização
+                automática de produtos e estoques.
+                <br></br>• Simplificação da gestão para maximizar visibilidade.
+              </div>
+
+              <div className="img3">
+                <img src={service3} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="content">
+            <div className="text-one">MENTALIDADE DA EQUIPE</div>
+            <div className="text-two">Capacitação da Equipe de Vendas:</div>
+            <div className="text-three">
+              • Instruções sobre produtos/serviços.
+            </div>
+            <div className="text-three">
+              • Técnicas de vendas e gestão de relacionamento.
+            </div>
+            <div className="text-three">
+              • Aprimoramento das práticas de comunicação.
+            </div>
+            <div className="text-four">
+              Desenvolvimento de Plano de Carreira:
+            </div>
+            <div className="text-five">
+              <div className="texts">
+                • Criação de roadmap para crescimento profissional. <br></br>•
+                Definição de metas e competências necessárias.
+                <br></br>• Incentivo à motivação, engajamento e retenção de
+                talentos.
+              </div>
+
+              <div className="img4">
+                <img src={service4} alt="" />
               </div>
             </div>
           </div>
