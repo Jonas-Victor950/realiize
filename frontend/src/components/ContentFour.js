@@ -9,7 +9,9 @@ import hashtag from "../images/hashtag.png";
 import service1 from "../images/8.png";
 import service2 from "../images/7.png";
 import service3 from "../images/14.png";
-import service4 from "../images/11.png"
+import service4 from "../images/11.png";
+import service5 from "../images/13.png";
+import service6 from "../images/9.png";
 import "./ContentFour.css";
 
 const ContentFour = () => {
@@ -163,6 +165,50 @@ const ContentFour = () => {
 
               <div className="img4">
                 <img src={service4} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="content">
+            <div className="text-one">OTIMIZAÇÃO EMPRESARIAL</div>
+            <div className="text-two">Configuração de Sistemas de Gestão:</div>
+            <div className="text-three">
+              • Personalização de categorias e cadastros.
+            </div>
+            <div className="text-three">
+              • Lançamento de estoque e organização financeira.
+            </div>
+            <div className="text-three">
+              • Ajustes fiscais para alinhamento aos processos.
+            </div>
+            <div className="text-four">Consultoria Financeira:</div>
+            <div className="text-five">
+              <div className="texts">
+                • Otimização de rentabilidade via precificação. <br></br>•
+                Análise de resultados com DRE.
+                <br></br>• Gestão de fluxo de caixa com DFC. <br></br>•
+                Dashboards, planilhas e análises mensais para fortalecer a saúde
+                financeira
+              </div>
+
+              <div className="img5">
+                <img src={service5} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="content">
+            <div className="text-one">REESTRUTURAÇÃO EMPRESARIAL</div>
+            <div className="text-five">
+              <div className="texts">
+                • Fortalecimento e revitalização para crescimento sustentável.
+                específicas. <br></br>• Identificação de oportunidades de
+                eficiência e otimização.
+                <br></br>• Processo abrangente para mudanças significativas.{" "}
+                <br /> • Realinhamento com objetivos futuros. <br /> • Ajustes
+                na estrutura organizacional. <br />• Preparação para desafios e
+                oportunidades futuras.
+              </div>
+              <div className="img6">
+                <img src={service6} alt="" />
               </div>
             </div>
           </div>
