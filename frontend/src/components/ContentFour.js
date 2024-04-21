@@ -12,6 +12,8 @@ import service3 from "../images/14.png";
 import service4 from "../images/11.png";
 import service5 from "../images/13.png";
 import service6 from "../images/9.png";
+import service7 from "../images/10.png";
+import service8 from "../images/12.png";
 import "./ContentFour.css";
 
 const ContentFour = () => {
@@ -98,7 +100,6 @@ const ContentFour = () => {
               </div>
             </div>
           </div>
-
           <div className="content">
             <div className="text-one">TRÁFEGO PAGO</div>
             <div className="text-two">Gestão de Tráfego Pago:</div>
@@ -200,8 +201,8 @@ const ContentFour = () => {
             <div className="text-five">
               <div className="texts">
                 • Fortalecimento e revitalização para crescimento sustentável.
-                específicas. <br></br>• Identificação de oportunidades de
-                eficiência e otimização.
+                <br></br>• Identificação de oportunidades de eficiência e
+                otimização.
                 <br></br>• Processo abrangente para mudanças significativas.{" "}
                 <br /> • Realinhamento com objetivos futuros. <br /> • Ajustes
                 na estrutura organizacional. <br />• Preparação para desafios e
@@ -209,6 +210,37 @@ const ContentFour = () => {
               </div>
               <div className="img6">
                 <img src={service6} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="content">
+            <div className="text-one">ARQUITETURA</div>
+            <div className="text-five">
+              <div className="texts">
+                • Consultoria e Desenvolvimento de Projetos:<br></br>•
+                Planejamento de Layout Interno:
+                <br></br>• Desenvolvimento de Planta Baixa: <br /> • Maquetes
+                Eletrônicas e Animações: <br /> • Desenvolvimento de Fachadas:
+                <br />• Acompanhamento de Obras: <br />• Emissão de RRT
+                (Registro de Responsabilidade Técnica) <br /> • Regularização de
+                Imóveis <br /> • Mapeamento Aéreo
+              </div>
+              <div className="img7">
+                <img src={service7} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="content">
+            <div className="text-one">CONTABILIDADE</div>
+            <div className="text-five">
+              <div className="texts">
+                • Constituição de empresas<br></br>• Escrituração fiscal
+                <br></br>• Departamento pessoal e RH <br /> • Planejamento
+                tributário <br /> • Controladoria e planejamento financeiro
+                <br />• Contabilidade em geral
+              </div>
+              <div className="img8">
+                <img src={service8} alt="" />
               </div>
             </div>
           </div>

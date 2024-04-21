@@ -13,20 +13,15 @@ import grafic from "../images/5.png";
 // Redux
 import { createUser } from "../slices/userSlice";
 
-// Components
-import { NavLink, Link } from "react-router-dom";
-
 // Hooks
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import ContentFour from "../components/ContentFour";
 
 const Home = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const { loading, message, error } = useSelector((state) => state.user);
+  const { loading } = useSelector((state) => state.user);
 
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
@@ -80,7 +75,7 @@ const Home = () => {
     const createUser1 = await dispatch(createUser(userData));
 
     if (createUser1.type === "user/create/fulfilled") {
-      window.location.reload();
+      console.log(createUser1.type);
     } else {
       alert(createUser1.payload);
       console.log(createUser1);
@@ -95,7 +90,7 @@ const Home = () => {
     <>
       <nav id="nav">
         <div className="left">
-          <img id="image" src={logo}></img>
+          <img id="image" src={logo} alt="logo"></img>
         </div>
         <div className="right">
           <div id="hamburger" onClick={toggleSideNavbar}>
@@ -135,7 +130,7 @@ const Home = () => {
           <div className="form-group">
             <div>
               <div>
-                <img src={hashtag} id="hashtag" />
+                <img src={hashtag} id="hashtag" alt="hashtag" />
               </div>
               <div>
                 <button onClick={handleScrollToContentTwo}>
@@ -145,7 +140,7 @@ const Home = () => {
             </div>
 
             <div>
-              <img id="gusAndBia" src={gusAndBia} />
+              <img id="gusAndBia" src={gusAndBia} alt="owners" />
             </div>
           </div>
           <div className="form-group">
@@ -159,11 +154,19 @@ const Home = () => {
         <div className="content-two" ref={contentTwoRef}>
           <div className="before-column">
             <div id="purple-rectangle"></div>
-            <img src={yellowContentTwo} id="image-yellow-content-two" />
+            <img
+              src={yellowContentTwo}
+              id="image-yellow-content-two"
+              alt="yellow-content-two"
+            />
             <div id="purple-rectangle2"></div>
           </div>
           <div className="before-column-desktop">
-            <img src={yellowTwoContentTwo} id="image-yellow-two-content-two" />
+            <img
+              src={yellowTwoContentTwo}
+              id="image-yellow-two-content-two"
+              alt="yellow-two-content-two"
+            />
           </div>
           <div className="columns">
             <div className="column-one">
@@ -178,10 +181,18 @@ const Home = () => {
               </div>
             </div>
             <div className="column-two">
-              <img src={purpleContentTwo} className="image-one" />
+              <img
+                src={purpleContentTwo}
+                className="image-one"
+                alt="purpleContentTwo"
+              />
             </div>
             <div className="column-two-two">
-              <img src={purpleTwoContentTwo} className="image-two" />
+              <img
+                src={purpleTwoContentTwo}
+                className="image-two"
+                alt="purpleTwoContentTwo"
+              />
             </div>
             <div className="column-three">
               <form onSubmit={handleSubmitCreateUser}>
@@ -240,7 +251,11 @@ const Home = () => {
         <div className="content-three">
           <div className="column-one">
             <div>
-              <img src={piramideContentThree} className="image-one" />
+              <img
+                src={piramideContentThree}
+                className="image-one"
+                alt="piramideContentThree"
+              />
             </div>
           </div>
           <div className="column-two">
@@ -266,7 +281,7 @@ const Home = () => {
             <div className="text-two">TIRE SUA IDEIA DO PAPEL!</div>
           </div>
           <div className="form-group-two">
-            <img src={grafic} className="image" />
+            <img src={grafic} className="image" alt="grafic" />
             <div className="flex-one">
               <div className="text-one">
                 A Realiize acredita no potencial dessa geração!
@@ -289,7 +304,7 @@ const Home = () => {
               </div>
 
               <div className="purple-vertical"></div>
-              <img src={grafic} className="image" />
+              <img src={grafic} className="image" alt="grafic" />
             </div>
           </div>
           <div className="form-group-three">
@@ -338,13 +353,38 @@ const Home = () => {
             <div className="text-one">QUER NOSSA AJUDA?</div>
             <form className="columns-one">
               <div className="left-side">
-                <input placeholder="NOME" />
-                <input placeholder="TELEFONE" />
-                <input placeholder="EMAIL" />
-                <input placeholder="QUAL SUA IDEIA" />
+                <input
+                  placeholder="NOME"
+                  value={name}
+                  required
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                  placeholder="TELEFONE"
+                  value={phone}
+                  required
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+                <input
+                  placeholder="EMAIL"
+                  value={email}
+                  required
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  placeholder="QUAL SUA IDEIA"
+                  value={idea}
+                  required
+                  onChange={(e) => setIdea(e.target.value)}
+                />
               </div>
               <div className="right-side">
-                <input placeholder="IDADE" />
+                <input
+                  placeholder="IDADE"
+                  value={age}
+                  required
+                  onChange={(e) => setAge(e.target.value)}
+                />
                 <button type="submit">ENVIAR</button>
               </div>
             </form>
