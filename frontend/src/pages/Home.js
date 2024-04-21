@@ -33,6 +33,12 @@ const Home = () => {
   const [company, setCompany] = useState(null);
 
   const [isSideNavbarOpen, setIsSideNavbarOpen] = useState(false);
+  const [dropdownWidth, setDropdownWidth] = useState(null);
+
+  const handleSelectClick = (e) => {
+    const selectWidth = e.target.offsetWidth;
+    setDropdownWidth(selectWidth);
+  };
 
   const contentTwoRef = useRef(null); // Referência para o elemento content-two
   const contentFourRef = useRef(null);
@@ -75,10 +81,9 @@ const Home = () => {
     const createUser1 = await dispatch(createUser(userData));
 
     if (createUser1.type === "user/create/fulfilled") {
-      console.log(createUser1.type);
+      window.location.reload();
     } else {
       alert(createUser1.payload);
-      console.log(createUser1);
     }
   };
 
@@ -228,11 +233,32 @@ const Home = () => {
                     required
                   ></input>
                 </div>
-                <div>
+                <div className="custom-select">
                   <select
                     value={nicho}
                     onChange={(e) => setNicho(e.target.value)}
-                  ></select>
+                    required
+                  >
+                    <option value={null}></option>
+                    <option value="Saude">Saúde</option>
+                    <option value="Estetica">Estética</option>
+                    <option value="Alimenticio">Alimentício</option>
+                    <option value="Pet">Pet</option>
+                    <option value="Educacao">Educação</option>
+                    <option value="Varejo">Varejo</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+                  <style jsx>{`
+                    .custom-select select {
+                      width: 100%;
+                      max-width: 100%;
+                    }
+                    .custom-select select + div {
+                      position: relative;
+                      display: inline-block;
+                      width: 100%; /* Define a largura do dropdown como 100% da largura do elemento pai */
+                    }
+                  `}</style>
                 </div>
                 <div>
                   <select

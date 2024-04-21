@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo from "../images/logoRealiize.png";
 import sideArrow from "../images/91.png";
-import hashtag from "../images/hashtag.png";
 import service1 from "../images/8.png";
 import service2 from "../images/7.png";
 import service3 from "../images/14.png";
@@ -19,19 +16,12 @@ import "./ContentFour.css";
 const ContentFour = () => {
   const sliderRef = useRef(null);
 
-  const handlePrevious = () => {
-    sliderRef.current.slickPrev();
-  };
-
-  const handleNext = () => {
-    sliderRef.current.slickNext();
-  };
-
   const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div>
         <img
+          alt="returnArrow"
           className={className}
           onClick={onClick}
           src={sideArrow}
@@ -45,10 +35,11 @@ const ContentFour = () => {
   };
 
   const NextArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div>
         <img
+          alt="nextArrow"
           src={sideArrow}
           className={className}
           onClick={onClick}
