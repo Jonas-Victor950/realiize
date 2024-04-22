@@ -33,12 +33,6 @@ const Home = () => {
   const [company, setCompany] = useState(null);
 
   const [isSideNavbarOpen, setIsSideNavbarOpen] = useState(false);
-  const [dropdownWidth, setDropdownWidth] = useState(null);
-
-  const handleSelectClick = (e) => {
-    const selectWidth = e.target.offsetWidth;
-    setDropdownWidth(selectWidth);
-  };
 
   const contentTwoRef = useRef(null); // Referência para o elemento content-two
   const contentFourRef = useRef(null);
@@ -260,11 +254,39 @@ const Home = () => {
                     }
                   `}</style>
                 </div>
-                <div>
+                <div className="custom-select1">
                   <select
                     value={budget}
                     onChange={(e) => setBudget(e.target.value)}
-                  ></select>
+                    required
+                  >
+                    <option value={null}></option>
+                    <option value="Ate 10.000">Até R$ 10.000</option>
+                    <option value="10.000 a 20.000">
+                      R$ 10.000 - R$ 20.000
+                    </option>
+                    <option value="20.000 a 50.000">
+                      R$ 20.000 - R$ 50.000
+                    </option>
+                    <option value="50.000 a 100.000">
+                      R$ 50.000 - R$ 100.000
+                    </option>
+                    <option value="100.000 a 500.000">
+                      R$ 100.000 - R$ 500.000
+                    </option>
+                    <option value="Acima 500.000">Acima de R$ 500.000</option>
+                  </select>
+                  <style jsx>{`
+                    .custom-select1 select {
+                      width: 100%;
+                      max-width: 100%;
+                    }
+                    .custom-select1 select + div {
+                      position: relative;
+                      display: inline-block;
+                      width: 100%; /* Define a largura do dropdown como 100% da largura do elemento pai */
+                    }
+                  `}</style>
                 </div>
                 <button type="submit">ENVIAR</button>
               </form>
