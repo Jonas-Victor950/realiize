@@ -29,6 +29,7 @@ const Home = () => {
   const [phone, setPhone] = useState(null);
   const [age, setAge] = useState(null);
   const [nicho, setNicho] = useState(null);
+  const [whatNicho, setWhatNicho] = useState(null);
   const [budget, setBudget] = useState(null);
   const [company, setCompany] = useState(null);
 
@@ -58,6 +59,12 @@ const Home = () => {
     setIsSideNavbarOpen(!isSideNavbarOpen);
   };
 
+  let nichoReal = nicho;
+
+  if (nicho === "Outros") {
+    nichoReal = whatNicho;
+  }
+
   const handleSubmitCreateUser = async (e) => {
     e.preventDefault();
 
@@ -67,7 +74,7 @@ const Home = () => {
       idea,
       phone,
       age,
-      nicho,
+      nicho: nichoReal,
       budget,
       company,
     };
@@ -233,7 +240,9 @@ const Home = () => {
                     onChange={(e) => setNicho(e.target.value)}
                     required
                   >
-                    <option value={null}></option>
+                    <option value="" disabled selected hidden>
+                      NICHO
+                    </option>
                     <option value="Saude">Saúde</option>
                     <option value="Estetica">Estética</option>
                     <option value="Alimenticio">Alimentício</option>
@@ -254,27 +263,35 @@ const Home = () => {
                     }
                   `}</style>
                 </div>
+                {nicho === "Outros" ? (
+                  <div>
+                    <input
+                      placeholder="Qual tipo de nicho?"
+                      value={whatNicho}
+                      onChange={(e) => setWhatNicho(e.target.value)}
+                      required
+                    ></input>
+                  </div>
+                ) : null}
                 <div className="custom-select1">
                   <select
                     value={budget}
                     onChange={(e) => setBudget(e.target.value)}
                     required
                   >
-                    <option value={null}></option>
-                    <option value="Ate 10.000">Até R$ 10.000</option>
-                    <option value="10.000 a 20.000">
-                      R$ 10.000 - R$ 20.000
+                    <option value="" disabled selected hidden>
+                      FATURAMENTO
                     </option>
-                    <option value="20.000 a 50.000">
-                      R$ 20.000 - R$ 50.000
-                    </option>
+                    <option value="Ate 10.000">Até R$10.000</option>
+                    <option value="10.000 a 20.000">R$10.000 - R$20.000</option>
+                    <option value="20.000 a 50.000">R$20.000 - R$50.000</option>
                     <option value="50.000 a 100.000">
-                      R$ 50.000 - R$ 100.000
+                      R$50.000 - R$100.000
                     </option>
                     <option value="100.000 a 500.000">
-                      R$ 100.000 - R$ 500.000
+                      R$100.000 - R$500.000
                     </option>
-                    <option value="Acima 500.000">Acima de R$ 500.000</option>
+                    <option value="Acima 500.000">Acima de R$500.000</option>
                   </select>
                   <style jsx>{`
                     .custom-select1 select {
