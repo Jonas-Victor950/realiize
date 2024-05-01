@@ -1,4 +1,4 @@
-export const api = "http://15.229.215.183:4000";
+export const api = "http://150.230.88.209:4000";
 
 export const requestConfig = (method, data, token = null, image = null) => {
   console.log(data, token);

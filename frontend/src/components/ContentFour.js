@@ -52,7 +52,7 @@ const ContentFour = () => {
   const settings = {
     dots: false,
     infinite: false,
-    speed: 20,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
@@ -66,6 +66,7 @@ const ContentFour = () => {
       <div style={{ width: "80vw" }}>
         <Slider {...settings} ref={sliderRef}>
           <div className="content">
+            <img src={service1} alt="" className="teste" />
             <div className="text-one">MARKETING</div>
             <div className="text-two">Gestão Estratégica de Redes Sociais:</div>
             <div className="text-three">
@@ -86,12 +87,13 @@ const ContentFour = () => {
                 Design profissional para panfletos, cartões, banners...{" "}
                 <br></br>• Comunicação efetiva da mensagem desejada.
               </div>
-              <div className="img">
+              {/* <div className="img">
                 <img src={service1} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="content">
+            <img src={service2} alt="" className="teste" />
             <div className="text-one">TRÁFEGO PAGO</div>
             <div className="text-two">Gestão de Tráfego Pago:</div>
             <div className="text-five">
@@ -102,12 +104,13 @@ const ContentFour = () => {
                 <br></br>• Otimização contínua com base em análises para metas
                 específicas.
               </div>
-              <div className="img2">
+              {/* <div className="img2">
                 <img src={service2} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="content">
+            <img src={service3} alt="" className="teste" />
             <div className="text-one">PRESENÇA ONLINE</div>
             <div className="text-two">Desenvolvimento de Site:</div>
             <div className="text-three">
@@ -127,12 +130,13 @@ const ContentFour = () => {
                 <br></br>• Simplificação da gestão para maximizar visibilidade.
               </div>
 
-              <div className="img3">
+              {/* <div className="img3">
                 <img src={service3} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="content">
+            <img src={service4} alt="" className="teste" />
             <div className="text-one">MENTALIDADE DA EQUIPE</div>
             <div className="text-two">Capacitação da Equipe de Vendas:</div>
             <div className="text-three">
@@ -155,12 +159,13 @@ const ContentFour = () => {
                 talentos.
               </div>
 
-              <div className="img4">
+              {/* <div className="img4">
                 <img src={service4} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="content">
+            <img src={service5} alt="" className="teste" />
             <div className="text-one">OTIMIZAÇÃO EMPRESARIAL</div>
             <div className="text-two">Configuração de Sistemas de Gestão:</div>
             <div className="text-three">
@@ -182,12 +187,13 @@ const ContentFour = () => {
                 financeira
               </div>
 
-              <div className="img5">
+              {/* <div className="img5">
                 <img src={service5} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="content">
+            <img src={service6} alt="" className="teste" />
             <div className="text-one">REESTRUTURAÇÃO EMPRESARIAL</div>
             <div className="text-five">
               <div className="texts">
@@ -199,12 +205,13 @@ const ContentFour = () => {
                 na estrutura organizacional. <br />• Preparação para desafios e
                 oportunidades futuras.
               </div>
-              <div className="img6">
+              {/* <div className="img6">
                 <img src={service6} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="content">
+            <img src={service7} alt="" className="teste" />
             <div className="text-one">ARQUITETURA</div>
             <div className="text-five">
               <div className="texts">
@@ -216,12 +223,13 @@ const ContentFour = () => {
                 (Registro de Responsabilidade Técnica) <br /> • Regularização de
                 Imóveis <br /> • Mapeamento Aéreo
               </div>
-              <div className="img7">
+              {/* <div className="img7">
                 <img src={service7} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="content">
+            <img src={service8} alt="" className="teste" />
             <div className="text-one">CONTABILIDADE</div>
             <div className="text-five">
               <div className="texts">
@@ -230,9 +238,9 @@ const ContentFour = () => {
                 tributário <br /> • Controladoria e planejamento financeiro
                 <br />• Contabilidade em geral
               </div>
-              <div className="img8">
+              {/* <div className="img8">
                 <img src={service8} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
         </Slider>

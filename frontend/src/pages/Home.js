@@ -9,6 +9,7 @@ import purpleTwoContentTwo from "../images/6.png";
 import piramideContentThree from "../images/3.png";
 import React, { useRef } from "react";
 import grafic from "../images/5.png";
+import InputMask from "react-input-mask";
 
 // Redux
 import { createUser } from "../slices/userSlice";
@@ -26,7 +27,7 @@ const Home = () => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [idea, setIdea] = useState(null);
-  const [phone, setPhone] = useState(null);
+  const [phone, setPhone] = useState("");
   const [age, setAge] = useState(null);
   const [nicho, setNicho] = useState(null);
   const [whatNicho, setWhatNicho] = useState(null);
@@ -211,12 +212,13 @@ const Home = () => {
                   ></input>
                 </div>
                 <div>
-                  <input
+                  <InputMask
+                    mask="(99) 9 9999-9999"
                     placeholder="TELEFONE"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     required
-                  ></input>
+                  />
                 </div>
                 <div>
                   <input
@@ -382,12 +384,15 @@ const Home = () => {
                   required
                   onChange={(e) => setName(e.target.value)}
                 />
-                <input
-                  placeholder="TELEFONE"
-                  value={phone}
-                  required
-                  onChange={(e) => setPhone(e.target.value)}
-                />
+                <div>
+                  <InputMask
+                    mask="(99) 9 9999-9999"
+                    placeholder="TELEFONE"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
               <div className="middle-side">
                 <input
@@ -410,7 +415,7 @@ const Home = () => {
                   required
                   onChange={(e) => setAge(e.target.value)}
                 />
-                <button>ENVIAR</button>
+                <button type="submit">ENVIAR</button>
               </div>
             </form>
           </div>

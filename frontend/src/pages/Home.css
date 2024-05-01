@@ -24,6 +24,7 @@
   padding-bottom: 5px;
   font-weight: 800;
   border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 #home .content-one .form-group .yellow-down {
   display: flex;
@@ -109,6 +110,7 @@
 
 #home .content-two .column-three form div select,
 #home .content-two .column-three form div input {
+  font-family: "Questrial", sans-serif;
   width: 60vw;
   height: 30px;
   margin-bottom: 5px;
@@ -173,7 +175,7 @@
 
 #home .content-three .column-two button {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   margin-right: 10vw;
   margin-left: 50vw;
   font-size: 0.8em;
@@ -210,8 +212,11 @@
   margin-top: 10px;
   border-radius: 4px;
   border: 2px solid #650ba4;
-  padding: 5px;
+  padding-right: 6px;
+  padding-left: 6px;
   color: #650ba4;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
 /*End Content-foury mobile */
@@ -337,7 +342,7 @@
   color: #650ba4;
   padding: 1px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 800;
 }
 /*End Content-five mobile */
 
@@ -390,7 +395,7 @@
   }
   #home .content-one .form-group button {
     width: 35vw;
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin-left: 5vw;
   }
   #home .content-one .form-group .yellow-down {
@@ -544,7 +549,7 @@
 
   #home .content-foury button {
     margin-top: 10px;
-    padding: 2px;
+    padding: 6px;
     font-size: 1.6vw;
   }
   /*End content-foury desktop */
@@ -720,7 +725,7 @@
     color: #650ba4;
     padding: 4px;
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 800;
   }
   /*End Content-five desktop */
 

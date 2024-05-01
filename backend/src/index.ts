@@ -18,7 +18,7 @@ import routerJovem from "./routes/jovem.routes";
 
 async function main() {
   const app = express();
-  const port = 6000;
+  const port = 4000;
 
   app.get("/", (req, res) => {
     res.send("Olá realiize!");
