@@ -36,6 +36,7 @@
 }
 #image {
   margin-top: 4vh;
+  width: 10vw;
 }
 
 @media screen and (min-width: 700px) {

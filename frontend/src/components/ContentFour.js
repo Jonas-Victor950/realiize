@@ -51,7 +51,7 @@ const ContentFour = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,

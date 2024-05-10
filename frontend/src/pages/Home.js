@@ -1,7 +1,7 @@
 import "./Home.css";
-import logo from "../images/logoRealiize.png";
-import hashtag from "../images/hashtag.png";
-import gusAndBia from "../images/1.png";
+import logo from "../images/18.png";
+import hashtag from "../images/15.png";
+import gusAndBia from "../images/17.png";
 import yellowContentTwo from "../images/amarelo_content_two.png";
 import yellowTwoContentTwo from "../images/2.png";
 import purpleContentTwo from "../images/4.png";
@@ -245,12 +245,16 @@ const Home = () => {
                     <option value="" disabled selected hidden>
                       NICHO
                     </option>
-                    <option value="Saude">Saúde</option>
-                    <option value="Estetica">Estética</option>
-                    <option value="Alimenticio">Alimentício</option>
-                    <option value="Pet">Pet</option>
-                    <option value="Educacao">Educação</option>
-                    <option value="Varejo">Varejo</option>
+                    <option
+                      value="SAUDE"
+                    >
+                      Saúde
+                    </option>
+                    <option value="ESTÉTICA">Estética</option>
+                    <option value="ALIMENTÍCIO">Alimentício</option>
+                    <option value="PET">Pet</option>
+                    <option value="EDUCAÇÃO">Educação</option>
+                    <option value="VAREJO">Varejo</option>
                     <option value="Outros">Outros</option>
                   </select>
                   <style jsx>{`

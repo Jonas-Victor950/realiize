@@ -1,17 +1,21 @@
 #home {
   font-size: 0.1em;
+  background: linear-gradient(to left, white, 	#836FFF);
 }
 #home .content-one {
   margin-bottom: 60px;
 }
 #home .content-one .form-group #hashtag {
   width: 80vw;
+  margin-top: 40px;
 }
 
 #home .content-one .form-group #gusAndBia {
   width: 90vw;
   align-items: right;
   margin-right: -10vw;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 #home .content-one .form-group button {
@@ -107,10 +111,13 @@
 #home .content-two .column-two-two {
   display: none;
 }
+#home .content-two .column-three form div select option {
+  font-family: "Montserrat", sans-serif;
+}
 
 #home .content-two .column-three form div select,
 #home .content-two .column-three form div input {
-  font-family: "Questrial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 60vw;
   height: 30px;
   margin-bottom: 5px;
@@ -124,7 +131,7 @@
 
 #home .content-two .column-three form div select::placeholder,
 #home .content-two .column-three form div input::placeholder {
-  font-family: "Questrial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #650ba4;
 }
 
@@ -231,7 +238,8 @@
 }
 
 #home .content-five .form-group-two .flex-one {
-  font-family: "Questrial", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
   font-size: 0.85em;
   display: flex;
   flex-direction: row;
@@ -243,6 +251,8 @@
 #home .content-five .form-group-two .flex-one .text-one,
 #home .content-five .form-group-two .flex-one .text-two {
   padding-top: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
 #home .content-five .form-group-two .flex-one .purple-vertical {
@@ -384,18 +394,19 @@
     align-items: center;
   }
   #home .content-one .form-group #hashtag {
-    width: 35vw;
+    width: 50vw;
     margin-left: 5vw;
+    margin-top: -50px;
   }
 
   #home .content-one .form-group #gusAndBia {
-    width: 45vw;
+    width: 36vw;
     align-items: right;
     margin-right: 0;
   }
   #home .content-one .form-group button {
-    width: 35vw;
-    font-size: 1.7vw;
+    width: 48vw;
+    font-size: 2vw;
     margin-left: 5vw;
   }
   #home .content-one .form-group .yellow-down {
@@ -405,6 +416,7 @@
     background-color: #ffd632;
     width: 100vw;
     font-size: 1.6vw;
+    margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -507,31 +519,32 @@
   /*Start content-three desktop */
 
   #home .content-three .column-one .image-one {
-    width: 40vw;
+    width: 45vw;
     align-items: left;
     image-orientation: left;
     margin-left: -30vw;
-    margin-top: 150px;
+    margin-top: 80px;
   }
 
   #home .content-three .column-two div {
-    margin-top: -200px;
-    font-size: 3vw;
+    margin-top: -300px;
+    font-size: 4.2vw;
     margin-right: 5vw;
-    margin-left: 60vw;
-    width: 30vw;
+    margin-left: 55vw;
+    width: 40vw;
   }
 
   #home .content-three .column-two button {
     margin-right: -5vw;
     margin-left: 40vw;
-    font-size: 1vw;
+    font-size: 2vw;
     border: 1px solid #650ba4; /* Definindo a borda */
     background-color: #ffd632;
     border-radius: 8px;
     margin-top: 15px;
     padding: 5px;
     color: #650ba4;
+    width: 35vw;
   }
   /*End content-three desktop */
 
@@ -601,7 +614,6 @@
   }
 
   #home .content-five .form-group-two-two .flex-one {
-    font-family: "Questrial", sans-serif;
     font-size: 0.85em;
     display: flex;
     flex-direction: row;
@@ -619,6 +631,8 @@
     font-size: 1.7vw;
     margin-left: 5vw;
     text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
   }
 
   #home .content-five .form-group-two-two .flex-one .purple-vertical {
@@ -744,6 +758,12 @@
   /*End Content-six desktop */
 }
 
+@media screen and (min-width: 1000px) {
+  #home .content-three .column-two div {
+    margin-top: -400px;
+  }
+}
+
 /* Versão Mobile First */
 #nav {
   width: 100vw;
@@ -784,7 +804,9 @@
   cursor: pointer;
 }
 #image {
-  margin-top: 4vh;
+  margin-left: 10px;
+  height: 50px;
+  justify-content: center;
 }
 
 #sideNavbar {
