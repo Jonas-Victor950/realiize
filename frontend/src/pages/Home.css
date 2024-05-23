@@ -1,9 +1,38 @@
+#whatsAppFixed {
+  display: none;
+}
+#whatsApp {
+  display: flex;
+  width: 150px;
+  margin-top: 10px;
+  right: 0;
+  align-items: right;
+  justify-content: right;
+}
+#whatsApp:hover {
+  cursor: pointer;
+}
+.modal-overlay {
+  display: none;
+}
+
+.modal-content {
+  display: none;
+}
+
+.modal-header {
+  display: none;
+}
+
+.modal-body {
+  display: none;
+}
 #home {
   font-size: 0.1em;
-  background: linear-gradient(to left, white, 	#836FFF);
+  background: linear-gradient(to left, white, #e380ff);
 }
 #home .content-one {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 #home .content-one .form-group #hashtag {
   width: 80vw;
@@ -58,7 +87,7 @@
 #home #purple-rectangle2 {
   background-color: #650ba4;
   height: 17px;
-  margin-top: -8px;
+  margin-top: -3px;
 }
 
 #home #image-yellow-content-two {
@@ -252,7 +281,7 @@
 #home .content-five .form-group-two .flex-one .text-two {
   padding-top: 8px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 1000;
 }
 
 #home .content-five .form-group-two .flex-one .purple-vertical {
@@ -382,6 +411,70 @@
 /* Starting desktop version */
 
 @media screen and (min-width: 700px) {
+  #whatsAppFixed {
+    display: flex;
+    position: fixed;
+    align-items: right;
+    justify-content: right;
+    right: 0;
+    width: 280px;
+    margin-top: 450px;
+    z-index: 5000;
+  }
+  #whatsAppFixed:hover {
+    cursor: pointer;
+  }
+  #whatsApp {
+    display: none;
+  }
+  .modal-overlay {
+    display: block;
+    position: fixed;
+    top: 420px;
+    right: 20px;
+    bottom: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    z-index: 1000;
+    width: 100vw;
+  }
+
+  .modal-content {
+    display: block;
+    background: #e380ff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    height: 140px;
+  }
+
+  .modal-header {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .modal-body {
+    display: block;
+    font-size: 11px;
+    text-align: justify;
+    margin-top: -15px;
+    
+  }
+
+  .modal-body button {
+    font-size: 11px;
+    background-color: #ffd632;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    color: #650ba4;
+    font-weight: 800;
+    margin-top: 5px;
+    border: 1px solid #650ba4;
+    border-radius: 7px;
+  }
   #home .content-one {
     display: flex;
     flex-direction: column;

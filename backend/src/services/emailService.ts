@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import authDB from "../database/default";
 
 // Configurações do serviço de e-mail (no exemplo, usei o Gmail)
 const transporter = nodemailer.createTransport({
@@ -7,19 +8,21 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: "jonasvpsouza950@gmail.com",
-    pass: "toni ocdi igau murp",
+    user: authDB.email,
+    pass: authDB.code,
   },
 });
 
 // Função para enviar e-mail
-export async function sendEmail(emailText: any) {
+export async function sendEmail(emailText: any, emailSubject: any) {
+  console.log("message", emailText.idea, emailText);
   // Configurações do e-mail a ser enviado
+
   const info = await transporter
     .sendMail({
       from: '"Jonas Victor 👻" <jonasvpsouza950@gmail.com>', // sender address
-      to: "jonasvictor950@gmail.com", // list of receivers
-      subject: "Documento para Aprovação - BRC", // Subject line
+      to: "realiize.comercial@gmail.com", // list of receivers
+      subject: `${emailSubject}`, // Subject line
       text: `${emailText}`, // plain text body
       html: `${emailText}`, // html body
     })

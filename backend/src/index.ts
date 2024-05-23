@@ -20,7 +20,7 @@ async function main() {
   const app = express();
   const port = 4000;
 
-  app.get("/", (req, res) => {
+  app.get("/api", (req, res) => {
     res.send("Olá realiize!");
   });
 

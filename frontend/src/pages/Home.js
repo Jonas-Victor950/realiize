@@ -2,13 +2,14 @@ import "./Home.css";
 import logo from "../images/18.png";
 import hashtag from "../images/15.png";
 import gusAndBia from "../images/17.png";
-import yellowContentTwo from "../images/amarelo_content_two.png";
+import yellowContentTwo from "../images/23.png";
 import yellowTwoContentTwo from "../images/2.png";
 import purpleContentTwo from "../images/4.png";
 import purpleTwoContentTwo from "../images/6.png";
 import piramideContentThree from "../images/3.png";
+import whatsApp from "../images/22.png";
 import React, { useRef } from "react";
-import grafic from "../images/5.png";
+import grafic from "../images/21.png";
 import InputMask from "react-input-mask";
 
 // Redux
@@ -23,6 +24,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const { loading } = useSelector((state) => state.user);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
@@ -58,6 +60,14 @@ const Home = () => {
 
   const toggleSideNavbar = () => {
     setIsSideNavbarOpen(!isSideNavbarOpen);
+  };
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   let nichoReal = nicho;
@@ -132,6 +142,36 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div id="whatsAppFixedContainer" onClick={toggleModal}>
+        <img src={whatsApp} alt="whatsapp" id="whatsAppFixed" />
+      </div>
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-body">
+              <div
+                style={{
+                  fontFamily: "Montserrat, sans-serif",
+                  color: "#650ba4",
+                  fontWeight: "800",
+                }}
+              >
+                Olá, quer um atendimento personalizado com o nosso time?
+              </div>
+              <button
+                onClick={() =>
+                  openInNewTab("https://wa.me/message/53NMZV4OAW7XF1")
+                }
+                
+              >
+                ENTRE EM CONTATO PELO WHATSAPP!
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div id="home">
         <div className="content-one">
           <div className="form-group">
@@ -156,6 +196,11 @@ const Home = () => {
               <div>EMPREENDA COM IMPACTO</div>
               <div>APOIO AOS JOVENS EMPREENDEDORES</div>
             </div>
+          </div>
+          <div
+            onClick={() => openInNewTab("https://wa.me/message/53NMZV4OAW7XF1")}
+          >
+            <img src={whatsApp} alt="" id="whatsApp" />
           </div>
         </div>
         <div className="content-two" ref={contentTwoRef}>
@@ -245,11 +290,7 @@ const Home = () => {
                     <option value="" disabled selected hidden>
                       NICHO
                     </option>
-                    <option
-                      value="SAUDE"
-                    >
-                      Saúde
-                    </option>
+                    <option value="SAUDE">Saúde</option>
                     <option value="ESTÉTICA">Estética</option>
                     <option value="ALIMENTÍCIO">Alimentício</option>
                     <option value="PET">Pet</option>
@@ -366,10 +407,16 @@ const Home = () => {
           <div className="form-group-two-two">
             <div className="flex-one">
               <div className="texts">
-                <div className="text-one">
+                <div
+                  className="text-one"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
                   A Realiize acredita no potencial dessa geração!
                 </div>
-                <div className="text-two">
+                <div
+                  className="text-two"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
                   Temos planos EXCLUSIVOS para jovens até 25 anos.
                 </div>
               </div>

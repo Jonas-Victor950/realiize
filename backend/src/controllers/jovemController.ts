@@ -21,17 +21,41 @@ const JovemController = {
     };
 
     if (await Jovem.findOne({ $or: [{ email: email }] })) {
-      return res.status(422).json({errors: ["Email já cadastrado!"]});
+      return res.status(422).json({ errors: ["Email já cadastrado!"] });
     } else {
       try {
         const jovem = await Jovem.create(jovemObj);
         console.log(jovem);
 
-        const emailText = `
-        <p>Fala zé mamão </p>
-        <p>${jovem} </p>`;
+        let emailText = null;
+        let emailSubject = null;
 
-        const send = await sendEmail(emailText);
+        if (jovem.idea === null) {
+          emailText = `
+        <p>Fala lindooo </p>
+        <p>Nome: ${jovem?.name} </p>
+        <p>Email: ${jovem?.email} </p>
+        <p>Telefone: ${jovem?.phone} </p>
+        <p>Nicho: ${jovem?.nicho} </p>
+        <p>Budget: ${jovem?.budget} </p>
+        <p>Empresa ${jovem?.company} </p>
+        `;
+
+          emailSubject = "Cadastro de Cliente";
+        } else {
+          emailText = `
+          <p>Fala lindooo </p>
+          <p>Nome: ${jovem?.name} </p>
+          <p>Email: ${jovem?.email} </p>
+          <p>Ideia: ${jovem?.idea} </p>
+          <p>Telefone: ${jovem?.phone} </p>
+          <p>Idade: ${jovem?.age} </p>
+        `;
+
+          emailSubject = "Cadastro de Jovem";
+        }
+
+        const send = await sendEmail(emailText, emailSubject);
 
         Logger.info("Cadastrado com sucesso!");
         return res.status(201).json({
