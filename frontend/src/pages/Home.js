@@ -11,6 +11,8 @@ import whatsApp from "../images/22.png";
 import React, { useRef } from "react";
 import grafic from "../images/21.png";
 import InputMask from "react-input-mask";
+import { Circles } from "react-loader-spinner";
+import Modal from "react-modal";
 
 // Redux
 import { createUser } from "../slices/userSlice";
@@ -25,6 +27,8 @@ const Home = () => {
 
   const { loading } = useSelector((state) => state.user);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen1, setIsModalOpen1] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
@@ -70,6 +74,12 @@ const Home = () => {
     setIsModalOpen(!isModalOpen);
   };
 
+  const toggleModal1 = (message) => {
+    setModalMessage(message);
+    setIsModalOpen1(!isModalOpen1);
+    setTimeout(() => setIsModalOpen1(false), 8000);
+  };
+
   let nichoReal = nicho;
 
   if (nicho === "Outros") {
@@ -93,18 +103,55 @@ const Home = () => {
     const createUser1 = await dispatch(createUser(userData));
 
     if (createUser1.type === "user/create/fulfilled") {
-      window.location.reload();
+      toggleModal1(
+        "Prontinho, em breve alguém da nossa equipe entrará em contato para um atendimento personalizado!!"
+      );
+      setName("");
+      setAge("");
+      setEmail("");
+      setPhone("");
+      setBudget("");
+      setNicho("");
+      setCompany("");
     } else {
-      alert(createUser1.payload);
+      toggleModal1(
+        `Oops, tivemos algum imprevisto no envio das informações... Poderia tentar novamente? Possível erro: ${createUser1.payload}`
+      );
+      // AQUI
     }
   };
 
   if (loading) {
-    return <p>Loading</p>;
+    // AQUI
+    return (
+      <div className="loading-container">
+        <Circles
+          height="80"
+          width="80"
+          color="#650ba4"
+          ariaLabel="circles-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+        <p style={{ marginTop: "20px" }}>
+          Você está a um passo de otimizar sua empresa!!
+        </p>
+      </div>
+    );
   }
 
   return (
     <>
+      <Modal
+        isOpen={isModalOpen1}
+        onRequestClose={() => setIsModalOpen1(false)}
+        contentLabel="Modal"
+        className="modal1"
+        overlayClassName="overlay1"
+      >
+        <h2>{modalMessage}</h2>
+      </Modal>
       <nav id="nav">
         <div className="left">
           <img id="image" src={logo} alt="logo"></img>
@@ -163,7 +210,6 @@ const Home = () => {
                 onClick={() =>
                   openInNewTab("https://wa.me/message/53NMZV4OAW7XF1")
                 }
-                
               >
                 ENTRE EM CONTATO PELO WHATSAPP!
               </button>

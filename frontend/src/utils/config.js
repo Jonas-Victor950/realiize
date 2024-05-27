@@ -1,5 +1,5 @@
-// export const api = "https://realiize.com.br/api";
-export const api = "http://localhost:4000/api";
+export const api = "https://realiize.com.br/api";
+// export const api = "http://localhost:4000/api";
 
 export const requestConfig = (method, data, token = null, image = null) => {
   console.log(data, token);
